@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@200&family=Thasadith&display=swap');
+
+*{
+  font-family: "IBM Plex Sans Thai", sans-serif;
+}
+::ng-deep #dx-toolbar-after {
+  left: 0;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
