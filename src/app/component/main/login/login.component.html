@@ -1,43 +1,50 @@
-<div class="container top-bar" align="center">
+<section class="vh-100" style="background: url('../../../../assets/img/bg.png');">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 25px;">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">เข้าสู่ระบบ</p>
+                
 
-  <div class="card " style="max-width: 70%; max-height: 600px;">
-    <div class="row g-0 shardows-box">
-      <div class=" col-img-main">
-        <div class="grid card-bg-left">
-        </div>
-        <p class="text-bts">© 2022 BETIMES SOLUTIONS. ALL RIGHTS RESERVED.
-        </p>
-      </div>
-      <div class=" col-md-8 ">
-        <div class="card-body">
-          <h1 class="card-title" style=" font-weight:bold;">เข้าสู่ระบบ</h1>
-          <div class="group-text-box">
+                <form class="mx-1 mx-md-4">
+                  <div class="input-group mb-3 ">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" class="form-control" placeholder="ชื่อผู้ใช้" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-3 ">
+                    <span class="input-group-text " id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" class="form-control" placeholder="รหัสผ่าน" aria-label="Password"
+                      aria-describedby="basic-addon1">
+                  </div>
+                  <div class="d-flex justify-content-center mb-3 mb-lg-4">
+                    <button type="button" class="btn btn-primary btn-lg" style="font-weight:bold; font-size: large;" routerLink="/mainmenu">เข้าสู่ระบบ</button>
+                  </div>
+                  <div class="d-flex">
+                    <div class=" re-set">
+                      <span><a class="reset-password" tabindex="5" href="" style="color: #549d59; font-weight:bold;" routerLink="/register">สมัคสมาชิก</a></span>
+                    </div>
+                    <div class=" help">
+                      <span><a class="reset-password" tabindex="5" style="color: red; font-weight:bold;">ลืมรหัสผ่าน ?</a></span>
+                    </div>
+                  </div>
+                  <div class="text-detail text-center" style="padding-top: 100px; font-weight:bold;">เว็บไซต์สั่งอาหาร บริษัท Betimes solutions <br>กรุณาระบุบัญชีผู้ใช้งานและรหัสผ่าน</div>
+                </form>
 
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="ชื่อผู้ใช้" aria-label="Username"
-                aria-describedby="basic-addon1" id="username" [(ngModel)]="username" ngModel="required">
+              </div>
+              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                <img src="../../../../assets/img/logo.png" class="img-fluid" alt="Sample image">
+
+              </div>
             </div>
-            <div class="input-group mb-3">
-              <input type="password" class="form-control" placeholder="รหัสผ่าน" aria-label="Password"
-                aria-describedby="basic-addon1" id="password" [(ngModel)]="password" ngModel="required">
-            </div>
-
-          </div>
-          <div>
-            <button type="submit" class="btn btn-success" (click)="onSubmit()"
-              [disabled]="!username.length">เข้าสู่ระบบ</button>
-            <div class="" style="padding-top: 15px;">
-              <p style="float: left; padding-left: 16%; color:#2c5b99; font-weight:bold;">ลงทะเบียน</p>
-              <p style="float: right; padding-right: 16%; color:#ff914d; font-weight:bold;">ลืมรหัสผ่าน ?</p>
-            </div>
-          </div>
-          <div class=" foot-title">
-            <p class="card-Description text-detail" style="color: #2c5b99; font-weight:bold;">ระบบสั่งอาหารกลางวัน
-              Betimes Solution</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>

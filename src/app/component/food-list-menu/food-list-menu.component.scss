@@ -1,0 +1,118 @@
+@media screen and (max-width:767px) {
+    .img-banner {
+        display: none;
+
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .media-1 {
+        padding-top: 40%;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .media-2 {
+        padding-top: 20%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .media-0 {
+        padding-top: 15%;
+    }
+}
+
+.service-20 {
+    font-family: "Montserrat", sans-serif;
+    color: #8d97ad;
+    font-weight: 300;
+}
+.select-box-class{
+    width: 40%;
+}
+
+.service-20 h1,
+.service-20 h2,
+.service-20 h3,
+.service-20 h4,
+.service-20 h5,
+.service-20 h6 {
+    color: #3e4555;
+}
+
+.service-20 h6 {
+    line-height: 22px;
+    font-size: 18px;
+}
+
+.service-20 .font-weight-medium {
+    font-weight: 500;
+}
+
+.service-20 .bg-light {
+    background-color: #f4f8fa !important;
+}
+
+.service-20 .wrap-service-20 .linking {
+    width: 100%;
+    display: block;
+    padding: 35px 0;
+}
+
+.service-20 .bg-success-gradiant {
+    background: #2cdd9b;
+    background: -webkit-linear-gradient(legacy-direction(to right), #2cdd9b 0%, #1dc8cc 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#2cdd9b), to(#1dc8cc));
+    background: -webkit-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: -o-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: linear-gradient(to right, #2cdd9b 0%, #1dc8cc 100%);
+}
+
+.service-20 a {
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    .rounded-right {
+        border-top-right-radius: 0 !important;
+    }
+}
+
+@media (min-width: 767px) {
+    .rounded-bottom {
+        border-bottom-left-radius: 0 !important;
+    }
+}
+
+.service-20 .btn-success-gradiant {
+    background: #2cdd9b;
+    background: -webkit-linear-gradient(legacy-direction(to right), #2cdd9b 0%, #1dc8cc 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#2cdd9b), to(#1dc8cc));
+    background: -webkit-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: -o-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: linear-gradient(to right, #2cdd9b 0%, #1dc8cc 100%);
+}
+
+.service-20 .btn-success-gradiant:hover {
+    background: #1dc8cc;
+    background: -webkit-linear-gradient(legacy-direction(to right), #1dc8cc 0%, #2cdd9b 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#1dc8cc), to(#2cdd9b));
+    background: -webkit-linear-gradient(left, #1dc8cc 0%, #2cdd9b 100%);
+    background: -o-linear-gradient(left, #1dc8cc 0%, #2cdd9b 100%);
+    background: linear-gradient(to right, #1dc8cc 0%, #2cdd9b 100%);
+}
+
+.service-20 .btn-md {
+    padding: 15px 45px;
+    font-size: 16px;
+}
+.mr-3{
+    width: 150px;
+    height: 120px;
+}
+.rounded {
+    border-radius: var(--bs-border-radius)!important;
+    width: 90%;
+    
+}
