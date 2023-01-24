@@ -60,7 +60,7 @@ const icons = {
     NgbDatepickerModule,
     NgbAlertModule,
     JsonPipe,
-    
+
   ],
   providers: [DecimalPipe],
   bootstrap: [AppComponent]
