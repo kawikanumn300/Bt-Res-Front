@@ -26,6 +26,7 @@ import { FooterComponent } from './component/main/footer/footer.component';
 import { FoodListMenuComponent } from './component/food-list-menu/food-list-menu.component';
 import { FoodListOrderDayComponent } from './component/food-list-order-day/food-list-order-day.component';
 import { AsyncPipe, DecimalPipe, NgFor } from '@angular/common';
+import { UserHistoryOrderComponent } from './component/user-history-order/user-history-order.component';
 const icons = {
 
   LogOut
@@ -42,6 +43,7 @@ const icons = {
     FooterComponent,
     FoodListMenuComponent,
     FoodListOrderDayComponent,
+    UserHistoryOrderComponent,
   ],
   imports: [
     BrowserModule,

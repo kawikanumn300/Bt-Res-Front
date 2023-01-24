@@ -8,6 +8,7 @@ import { LoginComponent } from './component/main/login/login.component';
 import { NavbarComponent } from './component/main/navbar/navbar.component';
 import { RegisterComponent } from './component/main/register/register.component';
 import { MainmenuComponent } from './component/mainmenu/mainmenu.component';
+import { UserHistoryOrderComponent } from './component/user-history-order/user-history-order.component';
 import { UserListDataComponent } from './component/user-list-data/user-list-data.component';
 
 const routes: Routes = [
@@ -47,7 +48,11 @@ const routes: Routes = [
   {
     path:"foodlistorderday",
     component:FoodListOrderDayComponent
-  }
+  },
+  {
+    path:"user-history-order",
+    component:UserHistoryOrderComponent
+  },
 ];
 
 @NgModule({
