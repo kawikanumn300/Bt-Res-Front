@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FeatherModule } from 'angular-feather';
 import { LogOut } from 'angular-feather/icons';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
