@@ -1,0 +1,29 @@
+@media screen and (min-width: 600px) {
+    .container {
+        padding-top: 15%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .c-2 {
+        padding-top: 25%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .c-3 {
+        padding-top: 35%;
+    }
+
+    .form-control {
+        width: 60%;
+    }
+
+    .col-form-label {
+        width: 35%;
+    }
+
+    .row {
+        flex-wrap: nowrap;
+    }
+}
