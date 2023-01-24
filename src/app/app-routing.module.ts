@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FoodListMenuComponent } from './component/food-list-menu/food-list-menu.component';
+import { FoodListOrderDayComponent } from './component/food-list-order-day/food-list-order-day.component';
 import { FooterComponent } from './component/main/footer/footer.component';
 
 import { LoginComponent } from './component/main/login/login.component';
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path:"user-list-data",
     component:UserListDataComponent
+  },
+  {
+    path:"foodlistorderday",
+    component:FoodListOrderDayComponent
   }
 ];
 
