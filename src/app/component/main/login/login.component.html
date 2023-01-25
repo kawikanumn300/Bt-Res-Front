@@ -10,19 +10,19 @@
                 <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">เข้าสู่ระบบ</p>
 
 
-                <form class="mx-1 mx-md-4">
+                <div class="mx-1 mx-md-4" >
                   <div class="input-group mb-3 ">
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
                     <input type="text" class="form-control" placeholder="ชื่อผู้ใช้" aria-label="Username"
-                      aria-describedby="basic-addon1">
+                      aria-describedby="basic-addon1" [(ngModel)]="username" id="username">
                   </div>
                   <div class="input-group mb-3 ">
                     <span class="input-group-text " id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
                     <input type="password" class="form-control" placeholder="รหัสผ่าน" aria-label="Password"
-                      aria-describedby="basic-addon1">
+                      aria-describedby="basic-addon1"[(ngModel)]="password" id="password">
                   </div>
                   <div class="d-flex justify-content-center mb-3 mb-lg-4">
-                    <button type="button" class="btn btn-primary btn-lg" style="font-weight:bold; font-size: large;" routerLink="/mainmenu">เข้าสู่ระบบ</button>
+                    <button type="submit" (click)="onSubmit()" [disabled]="!username.length" class="btn btn-primary btn-lg" style="font-weight:bold; font-size: large;" >เข้าสู่ระบบ</button>
                   </div>
                   <div class="d-flex">
                     <div class=" re-set">
@@ -33,7 +33,7 @@
                     </div>
                   </div>
                   <div class="text-detail text-center" style="padding-top: 100px; font-weight:bold;">เว็บไซต์สั่งอาหาร บริษัท Betimes solutions <br>กรุณาระบุบัญชีผู้ใช้งานและรหัสผ่าน</div>
-                </form>
+                </div>
 
               </div>
               <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
