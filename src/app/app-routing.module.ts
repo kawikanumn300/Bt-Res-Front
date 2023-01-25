@@ -7,9 +7,11 @@ import { FooterComponent } from './component/main/footer/footer.component';
 import { LoginComponent } from './component/main/login/login.component';
 import { NavbarComponent } from './component/main/navbar/navbar.component';
 import { RegisterComponent } from './component/main/register/register.component';
+import { UserEditComponent } from './component/main/user-edit/user-edit.component';
 import { MainmenuComponent } from './component/mainmenu/mainmenu.component';
 import { UserHistoryOrderComponent } from './component/user-history-order/user-history-order.component';
-import { UserListDataComponent } from './component/user-list-data/user-list-data.component';
+import { UserHistoryPayComponent } from './component/user-history-pay/user-history-pay.component';
+
 
 const routes: Routes = [
   {
@@ -26,6 +28,10 @@ const routes: Routes = [
     component: RegisterComponent
   },
   {
+    path: "user-edit",
+    component: UserEditComponent
+  },
+  {
     path: "navbar",
     component: NavbarComponent
   },
@@ -35,15 +41,12 @@ const routes: Routes = [
   },
   {
     path: "mainmenu",
-    component: MainmenuComponent
+    component: MainmenuComponent,
+    data: { animation: 'mainmenuPage' }
   },
   {
     path: "food-list-menu",
     component:FoodListMenuComponent
-  },
-  {
-    path:"user-list-data",
-    component:UserListDataComponent
   },
   {
     path:"foodlistorderday",
@@ -53,6 +56,10 @@ const routes: Routes = [
     path:"user-history-order",
     component:UserHistoryOrderComponent
   },
+  {
+    path:"user-history-pay",
+    component:UserHistoryPayComponent
+  }
 ];
 
 @NgModule({

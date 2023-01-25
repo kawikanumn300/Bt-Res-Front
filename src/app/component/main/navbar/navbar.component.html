@@ -30,8 +30,8 @@
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<li><a class="dropdown-item"routerLink="/user-history-order">ประวัติการสั่งอาหาร</a></li>
-							<li><a class="dropdown-item">ประวัติการชำระเงิน</a></li>
-							<li><a class="dropdown-item">แก้ไขข้อมูลส่วนตัว</a></li>
+							<li><a class="dropdown-item" routerLink="/user-history-pay">ประวัติการชำระเงิน</a></li>
+							<li><a class="dropdown-item" routerLink="/user-edit">แก้ไขข้อมูลส่วนตัว</a></li>
 						</ul>
 					</li>
 					<li class="nav-item">
@@ -43,73 +43,3 @@
 	</div>
 </nav>
 
-
-
-<!-- Sidebar -->
-<!-- <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-	<div class="offdisplay">
-		<ul class="nav nav-pills">
-			<div class="col-design-menu">
-				<button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close"><i
-						class="fa-solid fa-xmark"></i></button>
-			</div>
-			<li class="nav-item">
-				<p class="nav-link " aria-current="page" style="font-size: 20px;font-weight: bold;color: white;">
-					สวัสดี คุณ XXXXXXXXX
-				</p>
-				<p class="nav-link " aria-current="page" style="font-size: 16px;font-weight: bold;color: white;">
-					ยอดเงินค้างชำระ -1200 . บาท
-				</p>
-			</li>
-		</ul>
-	</div>
-	<div class="border-text"></div>
-	<div class="container">
-		<li class="nav-link" style="
-		font-size: 14px;
-		font-weight: bold;
-		color: white;
-		padding-top: 10%;
-		padding-left: 9%;
-	">{{todayDate| date: 'EEEE d MMMM y เวลา h:mm'}}</li>
-	</div>
-
-	<div class="offcanvas-body">
-		<ul class="nav nav-pills flex-column mb-auto">
-			<li class="nav-item block-system"routerLink="/mainmenu">
-				<a class="nav-link f-2" aria-current="page">
-					<i class="fa-solid fa-house fa-icon-style"></i> หน้าหลัก
-				</a>
-			</li>
-			<li>
-				<a class="nav-link f-2 block-system " routerLink="/food-list-menu">
-					<i class="fa-solid fa-user-shield fa-icon-style"></i> ข้อมูลผู้ใช้
-				</a>
-			</li>
-			<li>
-				<a class="nav-link f-2 block-system ">
-					<i class="fa-regular fa-credit-card fa-icon-style"></i> ชำระเงิน
-				</a>
-			</li>
-			<li>
-				<a class="nav-link f-2 block-system ">
-					<i class="fa-sharp fa-solid fa-receipt fa-icon-style"></i> ประวัติการชำระเงิน
-				</a>
-			</li>
-			<li>
-				<a class="nav-link f-2 block-system ">
-					<i class="fa-solid fa-list-check fa-icon-style"></i> ประวัติการสั่งอาหาร
-				</a>
-			</li>
-		</ul>
-
-		<ul class="nav nav-pills flex-column mb-auto">
-			<li class="nav-item ">
-				<a class="nav-link f-2 block-system " aria-current="page">
-					<i class="fa-solid fa-right-from-bracket fa-icon-style"></i> ออกจากระบบ
-				</a>
-			</li>
-		</ul>
-
-	</div>
-</div>

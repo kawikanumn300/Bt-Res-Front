@@ -2,6 +2,9 @@
     cursor: pointer;
     display: flex;
 }
+.container{
+    padding-top: 1%;
+}
 
 .img-hello-user {
     position: absolute;
@@ -71,37 +74,9 @@
     border-radius: 0.5rem;
 }
 
-.container {
-    padding-top: 10%;
-}
-@media screen and (max-width:600px) {
-    .row {
-        width: 100%;
-        padding-left: 6%;
-    }
-}
-
 @media screen and (max-width:767px) {
     .img-banner {
         display: none;
 
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .media-col {
-        padding-top: 30%;
-    }
-}
-
-@media screen and (min-width: 601px) {
-    .container {
-        padding-top: 20%;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    .full-screen {
-        padding-top: 10%;
     }
 }

@@ -1,40 +1,43 @@
-<app-navbar></app-navbar>
-
-<div class="container c-2 c-3">
+<div class="container">
+	<h1 style="font-weight: bold;">รายการสั่งอาหารประจำวันนี้</h1>
 	<div class="card">
 		<div class="card-body">
 			<div class="row">
-				<h1 style="font-weight: bold;">รายการสั่งอาหารประจำวันนี้</h1>
-				<div style="padding-top: 5%;"></div>
+				<div style="padding-top: 2%;"></div>
 				<div class="mb-3 row-edit">
-					<label for="table-filtering-search" class="col-xs-3 col-sm-auto col-form-label" style="padding-right: 2%;" >ค้นหา:</label>
+					<label for="table-filtering-search" class="col-xs-3 col-sm-auto col-form-label"
+						style="padding-right: 2%;">ค้นหา:</label>
 					<div class="col-xs-3 col-sm-auto">
 						<input id="table-filtering-search" class="form-control" type="text" [formControl]="filter" />
 					</div>
 				</div>
-			</div>		  
+			</div>
 		</div>
-	  </div>
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th scope="col">ลำดับ</th>
-				<th scope="col">ชื่อผู้สั่ง</th>
-				<th scope="col">ชื่ออาหาร</th>
-				<th scope="col">ราคา</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr *ngFor="let country of countries$ | async; index as i">
-				<th scope="row">{{ i + 1 }}</th>
-				<td>
-					<img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="me-2"
-						style="width: 20px" />
-					<ngb-highlight [result]="country.name" [term]="filter.value"></ngb-highlight>
-				</td>
-				<td><ngb-highlight [result]="country.area | number" [term]="filter.value"></ngb-highlight></td>
-				<td><ngb-highlight [result]="country.population | number" [term]="filter.value"></ngb-highlight></td>
-			</tr>
-		</tbody>
-	</table>
+		<div class="container-table">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col">ลำดับ</th>
+						<th scope="col">ชื่อผู้สั่ง</th>
+						<th scope="col">ชื่ออาหาร</th>
+						<th scope="col">ราคา</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let country of countries$ | async; index as i">
+						<th scope="row">{{ i + 1 }}</th>
+						<td>
+							<img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="me-2"
+								style="width: 20px" />
+							<ngb-highlight [result]="country.name" [term]="filter.value"></ngb-highlight>
+						</td>
+						<td><ngb-highlight [result]="country.area | number" [term]="filter.value"></ngb-highlight></td>
+						<td><ngb-highlight [result]="country.population | number" [term]="filter.value"></ngb-highlight>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</div>
+	</div>
 </div>

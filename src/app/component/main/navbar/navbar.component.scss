@@ -44,7 +44,7 @@
 .bg-light {
     background: linear-gradient(90deg, rgb(44, 91, 153), rgba(49, 120, 214, 0.963)) !important;
     box-shadow: 1px 5px 15px 5px rgb(0 0 0 / 20%), 0 10px 20px 5px rgb(0 0 0 / 4%);
-    position: fixed;
+    position: relative;
     width: 100%;
     z-index: 100;
 }

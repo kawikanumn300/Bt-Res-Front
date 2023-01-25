@@ -1,0 +1,61 @@
+
+@media screen and (max-width: 1000px) {
+    .c-2 {
+        padding-top: 25%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .c-3 {
+        padding-top: 10%;
+    }
+
+    .col-form-label {
+        width: 15%;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .c-4 {
+        padding-top: 5%;
+    }
+
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+.row {
+    --mdb-gutter-x: 1.5rem;
+    --mdb-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--mdb-gutter-y)*-1);
+    margin-right: calc(var(--mdb-gutter-x)*-0.5);
+    margin-left: calc(var(--mdb-gutter-x)*-0.5);
+}
+
+.card-registration .select-arrow {
+    top: 13px;
+}
+
+.card {
+    border: 0;
+    box-shadow: 20px 12px 15px 5px rgb(0 0 0 / 20%), 0 10px 20px 5px rgb(0 0 0 / 4%);
+    background: #ffffff;
+}
+.reg {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 50%;
+}
+.btn-primary {
+background-color: #2c5b99;
+color: #fff;
+box-shadow: 0 4px 9px -4px #3b71ca;
+width: 100%;
+font-size: 20px;
+}
