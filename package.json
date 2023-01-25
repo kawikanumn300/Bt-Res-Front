@@ -33,6 +33,7 @@
     "devextreme-angular": "^22.2.3",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.3",
+    "mdb-ui-kit": "^6.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
@@ -49,7 +50,10 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+<<<<<<< HEAD
     "mdb-ui-kit": "^6.1.0",
+=======
+>>>>>>> 76c9349d04924e8087ce37ceaaa508d1c45b923b
     "typescript": "~4.8.2"
   }
 }

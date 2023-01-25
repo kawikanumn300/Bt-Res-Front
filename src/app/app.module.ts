@@ -11,20 +11,19 @@ import {
   NgbTypeaheadModule,
   NgbDatepickerModule,
   NgbAlertModule,
-  NgbDateStruct, NgbModalModule, NgbModalOptions
+ NgbModalModule, NgbModalOptions,
+
+  NgbPaginationModule,
 } from '@ng-bootstrap/ng-bootstrap';
 
-
-import { JsonPipe } from '@angular/common';
+import {FoodListOrderDayComponent } from './component/food-list-order-day/food-list-order-day.component'
+import { JsonPipe, NgIf } from '@angular/common';
 import { LoginComponent } from './component/main/login/login.component';
 import { NavbarComponent } from './component/main/navbar/navbar.component';
 import { RegisterComponent } from './component/main/register/register.component';
 import { MainmenuComponent } from './component/mainmenu/mainmenu.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { UserListDataComponent } from './component/user-list-data/user-list-data.component';
 import { FooterComponent } from './component/main/footer/footer.component';
 import { FoodListMenuComponent } from './component/food-list-menu/food-list-menu.component';
-import { FoodListOrderDayComponent } from './component/food-list-order-day/food-list-order-day.component';
 import { AsyncPipe, DecimalPipe, NgFor } from '@angular/common';
 
 import {
@@ -51,6 +50,11 @@ import {
 import { LogoutModalComponent } from './component/main/logout-modal/logout-modal.component';
 import { LoginModalComponent } from './component/main/login-modal/login-modal.component';
 
+import { UserHistoryOrderComponent } from './component/user-history-order/user-history-order.component';
+import { UserHistoryPayComponent } from './component/user-history-pay/user-history-pay.component';
+import { UserEditComponent } from './component/main/user-edit/user-edit.component';
+import { UserPaymentComponent } from './component/user-payment/user-payment.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const icons = {
 
@@ -64,12 +68,16 @@ const icons = {
     RegisterComponent,
     NavbarComponent,
     MainmenuComponent,
-    UserListDataComponent,
     FooterComponent,
     FoodListMenuComponent,
+    UserHistoryOrderComponent,
     FoodListOrderDayComponent,
     LogoutModalComponent,
     LoginModalComponent,
+    UserHistoryPayComponent,
+    UserEditComponent,
+    UserPaymentComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -87,7 +95,13 @@ const icons = {
     NgbAlertModule,
     JsonPipe,
     DxButtonModule,
-     NgbModalModule
+     NgbModalModule,
+		DecimalPipe,
+		FormsModule,
+		AsyncPipe,
+		NgbTypeaheadModule,
+		NgbPaginationModule,
+		NgIf,
 
   ],
   providers: [DecimalPipe],
