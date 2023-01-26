@@ -28,7 +28,7 @@ export class MainmenuComponent implements OnInit {
   }
   selectmenu(item: any) {
     console.log(item);
-    this.router.navigate(['/food-list-menu'],);
+    this.router.navigate(['/food-list-menu' ,{ id : item}]);
 
   }
 }

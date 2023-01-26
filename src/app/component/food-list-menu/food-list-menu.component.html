@@ -3,39 +3,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <img src="https://amarinacademy.com/app/uploads/2017/06/petr-sevcovic-594807-unsplash.jpg"
-                        alt="wrapkit" class="img-fluid" />
+                    <img onerror="this.src='https://www.pf.co.th/blog/wp-content/uploads/2017/09/jocho_01.png'"
+                     src="https://utcc-prc.demotoday.net/bt-order-api{{resdata.RES_IMAGE}}"
+                    class="card-img-top" alt="{{resdata.RES_NAME}}"alt="wrapkit" class="img-fluid" />
                 </div>
                 <div class="col-lg-6">
                     <div class="card border-0 mb-4">
                         <div class="card-body">
-                            <h3 class="my-3 text-uppercase" style="font-weight: bold; padding-bottom: 10px;">ร้าน
-                                ครัวคุณเปิ้ล</h3>
+                            <h3 class="my-3 text-uppercase" style="font-weight: bold; padding-bottom: 10px;">{{this.resdata.RES_NAME}}</h3>
                             <div class="row font-s">
                                 <div class="my-4 row">
                                     <div class="col-5">
                                         <i class="fa-solid fa-phone-volume"></i>
                                     </div>
                                     <div class="col-6">
-                                        085-856-9985
-                                    </div>
-                                </div>
-                                <div class="my-4 row">
-                                    <div class="col-5">
-                                        <i class="fa-sharp fa-solid fa-circle-info fa-icon-style"></i>
-                                    </div>
-                                    <div class="col-6">
-                                        อาหารอร่อยราคาถูก ต้องสั่งอาหาร ก่อน 10.00 น. มิเช่นนั้น
-                                        อาหารจะออกมาช้าเนื่องจากลูกค้าเยอะ
+                                        {{this.resdata.RES_PHONE}}
                                     </div>
                                 </div>
                             </div>
                             <div class="row font-s" style="padding-top: 10%">
                                 <div class="my-4 row">
-                                    <div class="col-5"><i class="fa-solid fa-location-crosshairs fa-icon-style"></i>
+                                    <div class="col-5"> <i class="fa-sharp fa-solid fa-circle-info fa-icon-style"></i>
                                     </div>
                                     <div class="col-6">
-                                        16 ซ.สุขุมวิท 62 แขวง บางจาก เขตพระโขนง กรุงเทพมหานคร 10260
+                                        <!-- 16 ซ.สุขุมวิท 62 แขวง บางจาก เขตพระโขนง กรุงเทพมหานคร 10260 -->
+                                        {{this.resdata.RES_DETAIL}}
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +43,7 @@
         <!-- Row -->
         <div class="row wrap-service-20">
             <!-- Column -->
-            <div class="col-lg-6">
+            <div class="col-lg-6" >
                 <div class="card border-0 mb-4">
                     <div class="row no-gutters">
                         <div class="col-md-8">
@@ -144,8 +136,9 @@
 
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title" style="color: white;" >กระเพราไก่ชิ้น</h4>
-                        <button type="button" class="btn" style="color: white;" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+                        <h4 class="modal-title" style="color: white;">กระเพราไก่ชิ้น</h4>
+                        <button type="button" class="btn" style="color: white;" data-bs-dismiss="modal"><i
+                                class="fa-solid fa-xmark"></i></button>
                     </div>
 
                     <!-- Modal body -->
@@ -214,9 +207,11 @@
                                 </div>
                             </fieldset>
                             <div class="form-floating" style="padding-top:10px;">
-                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                                <label for="floatingTextarea2">กรุณาระบุความต้องการอื่นๆ เช่น เผ็ดน้อย !! (ถ้ามี)</label>
-                              </div>
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                    style="height: 100px"></textarea>
+                                <label for="floatingTextarea2">กรุณาระบุความต้องการอื่นๆ เช่น เผ็ดน้อย !!
+                                    (ถ้ามี)</label>
+                            </div>
                         </form>
                     </div>
 
@@ -226,7 +221,8 @@
                             <div class="col-6-sum">
                                 <label for="gridCheck1">ราคา </label>
                             </div>
-                                <button type="submit" class="btn btn-primary col-5x20px" data-bs-dismiss="modal">ยืนยัน</button>
+                            <button type="submit" class="btn btn-primary col-5x20px"
+                                data-bs-dismiss="modal">ยืนยัน</button>
                         </div>
                     </div>
                 </div>

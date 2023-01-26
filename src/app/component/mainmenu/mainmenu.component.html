@@ -1,48 +1,33 @@
 <div class="container media-col full-screen">
-  <div class="adjust-card">
-    <div class="block-system-2">
-      <div class="card-head  h-100">
-        <div class="card-body ">
-          <h5 class="card-head-title">สวัสดี หิวรึเปล่า เลือกร้านที่ชอบได้เลย !!</h5>
-          <p class="card-head-text">
-            รับประทานอาหารให้อร่อย
-          </p>
-          <img _ngcontent-nbs-c112="" src="assets/img/tumnail.png" height="150%" class="img-hello-user img-banner">
+    <div class="adjust-card">
+        <div class="block-system-2">
+            <div class="card-head  h-100">
+                <div class="card-body ">
+                    <h5 class="card-head-title">สวัสดี หิวรึเปล่า เลือกร้านที่ชอบได้เลย !!</h5>
+                    <p class="card-head-text">
+                        รับประทานอาหารให้อร่อย
+                    </p>
+                    <img _ngcontent-nbs-c112="" src="assets/img/tumnail.png" height="150%"
+                        class="img-hello-user img-banner">
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <div style="padding-top: 3%;">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col block-system" *ngFor="let item of resdata; let i = index" >
-        <div class="card h-100" (click)="selectmenu(item.RES_ID)">
-          <img onerror="this.src='https://www.pf.co.th/blog/wp-content/uploads/2017/09/jocho_01.png'" *ngIf="showImg" src="https://utcc-prc.demotoday.net/bt-order-api{{item.RES_IMAGE}}" class="card-img-top"
-            alt="{{item.RES_NAME}}" />
-
-
-          <div class="card-body">
-            <h5 class="card-title">{{item.RES_NAME}}</h5>
-            <p class="card-text">
-            </p>
-          </div>
     <div style="padding-top: 3%;">
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col block-system" routerLink="/food-list-menu">
-                <div class="card h-100">
-                    <img src="https://images.deliveryhero.io/image/fd-th/LH/a0az-hero.jpg" class="card-img-top"
-                        alt="Hollywood Sign on The Hill" />
+            <div class="col block-system" *ngFor="let item of resdata; let i = index">
+                <div class="card h-100" (click)="selectmenu(item.RES_ID)">
+                    <img onerror="this.src='https://www.pf.co.th/blog/wp-content/uploads/2017/09/jocho_01.png'"
+                        *ngIf="showImg" src="https://utcc-prc.demotoday.net/bt-order-api{{item.RES_IMAGE}}"
+                        class="card-img-top" alt="{{item.RES_NAME}}" />
+
+
                     <div class="card-body">
-                        <h5 class="card-title">ครัวคุณเปิ้ล</h5>
+                        <h5 class="card-title">{{item.RES_NAME}}</h5>
                         <p class="card-text">
                         </p>
                     </div>
-                </div>
-            </div>
-            
-
-        </div>
-      </div>
-      <!-- <div class="col block-system">
+                    <!-- <div class="col block-system">
         <div class="card h-100">
           <img
             src="https://kin-keng.com/wp-content/uploads/2021/07/dFQROr7oWzulq5FZXUerrMdCIdiXr16Iz1Lcfv2tZWrxnFLZp3iQD83VXjP0Jtxmip9-1024x576.jpg"
@@ -64,8 +49,8 @@
         </div>
       </div> -->
 
-    </div>
-  </div>
-</div>
+                </div>
+            </div>
+        </div>
 
-<app-footer></app-footer>
+        <app-footer></app-footer>
