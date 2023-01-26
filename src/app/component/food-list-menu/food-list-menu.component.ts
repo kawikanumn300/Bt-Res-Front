@@ -11,7 +11,7 @@ import { BtResFoodList, foodlisturl} from 'src/app/service/BtResFoodListService'
 })
 export class FoodListMenuComponent {
   resdata : any ;
-  idf : any ; 
+  idf : any ;
   foodlistdata : any ;
   foodid : any ;
 
@@ -21,15 +21,18 @@ export class FoodListMenuComponent {
   ngOnInit() {
     this.idf = this.route.snapshot.paramMap.get('id');
     console.log(this.idf);
-    
+
     this.http.get<BtResNameList>(namelisturl+'/'+this.idf).subscribe(response => {
       this.resdata = response.Value;
-      console.log(this.resdata+'ข้อมูลร้านอาหาร');
+      console.log('ข้อมูลร้านอาหาร');
+      console.log(this.resdata);
     })
-    this.http.get<BtResFoodList>(foodlisturl+"/"+this.foodid).subscribe(response => {
+    this.http.get<BtResFoodList>(foodlisturl).subscribe(response => {
       this.foodlistdata = response.Value;
-      console.log(this.foodlistdata+'ข้อมูลรายการอาหาร');
+      console.log('ข้อมูลรายการอาหาร');
+      console.log(this.foodlistdata);
+      
     })
   }
-  
+
 }
