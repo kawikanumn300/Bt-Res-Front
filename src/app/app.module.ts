@@ -26,27 +26,27 @@ import { FooterComponent } from './component/main/footer/footer.component';
 import { FoodListMenuComponent } from './component/food-list-menu/food-list-menu.component';
 import { AsyncPipe, DecimalPipe, NgFor } from '@angular/common';
 
-import {
-  DxButtonModule,
-  DxCheckBoxModule,
-  DxDateBoxModule,
-  DxListModule,
-  DxLoadIndicatorModule,
-  DxLoadPanelModule,
-  DxSelectBoxModule,
-  DxValidationSummaryModule,
-  DxValidatorModule,
-  DxRadioGroupModule,
-  DxGalleryModule,
-  DxCalendarModule,
-  DxDataGridModule,
-  DxBulletModule,
-  DxTemplateModule,
-  DxTextBoxModule,
-  DxFormModule,
-  DxTooltipModule,
+// import {
+//   DxButtonModule,
+//   DxCheckBoxModule,
+//   DxDateBoxModule,
+//   DxListModule,
+//   DxLoadIndicatorModule,
+//   DxLoadPanelModule,
+//   DxSelectBoxModule,
+//   DxValidationSummaryModule,
+//   DxValidatorModule,
+//   DxRadioGroupModule,
+//   DxGalleryModule,
+//   DxCalendarModule,
+//   DxDataGridModule,
+//   DxBulletModule,
+//   DxTemplateModule,
+//   DxTextBoxModule,
+//   DxFormModule,
+//   DxTooltipModule,
 
-} from 'devextreme-angular';
+// } from 'devextreme-angular';
 import { LogoutModalComponent } from './component/main/logout-modal/logout-modal.component';
 import { LoginModalComponent } from './component/main/login-modal/login-modal.component';
 
@@ -94,7 +94,6 @@ const icons = {
     NgbDatepickerModule,
     NgbAlertModule,
     JsonPipe,
-    DxButtonModule,
      NgbModalModule,
 		DecimalPipe,
 		FormsModule,
