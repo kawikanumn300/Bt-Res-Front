@@ -1,11 +1,11 @@
 <div class="modal-header">
-  <h4 class="modal-title">เข้าสู่ระบบ</h4>
+  <h4 class="modal-title">{{Title}}</h4>
 
 </div>
 <div class="modal-body">
-  <p>{{myData}}</p>
+  <p style=" font-weight: bold;">{{myData}}</p>
 </div>
 <div class="modal-footer">
 
-  <button type="button" class="btn btn-info" (click)="activeModal.close(true)">ตกลง</button>
+  <button type="button" class="btn btn-info modal-title" (click)="activeModal.close(true)">ตกลง</button>
 </div>

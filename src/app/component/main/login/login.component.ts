@@ -39,6 +39,8 @@ export class LoginComponent {
 
         const modalRef = this.modalService.open(LoginModalComponent);
         modalRef.componentInstance.myData = 'ยินดีต้อนรับเข้าสู่ระบบคุณ ' + this.value.Value.USER_NAME;
+        modalRef.componentInstance.Title = 'เข้าสู่ระบบ';
+
 
 
         modalRef.result.then((result) => {
@@ -51,8 +53,10 @@ export class LoginComponent {
 
       } else {
         const modalRef = this.modalService.open(LoginModalComponent);
-        modalRef.componentInstance.myData = 'Username หรือ Password ผิด ';
+        modalRef.componentInstance.myData = 'Username หรือ Password ไม่ถูกต้อง !! กรุณา เข้าสู่ระบบอีกครัง ';
+        modalRef.componentInstance.Title = 'ล้มเหลว';
         console.log("user or pass error");
+        
 
         this.username = "";
         this.password = "";
@@ -62,5 +66,11 @@ export class LoginComponent {
       console.log(error);
     });
     console.log(data);
+  }
+  forgetpassword(){
+    const modalRef = this.modalService.open(LoginModalComponent);
+    modalRef.componentInstance.myData = 'กรุณาติดต่อเจ้าหน้าที่';
+    modalRef.componentInstance.Title = 'ลืมรหัสผ่าน';
+    
   }
 }

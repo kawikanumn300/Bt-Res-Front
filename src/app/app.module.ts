@@ -55,6 +55,7 @@ import { UserHistoryPayComponent } from './component/user-history-pay/user-histo
 import { UserEditComponent } from './component/main/user-edit/user-edit.component';
 import { UserPaymentComponent } from './component/user-payment/user-payment.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegisterModalComponent } from './component/main/register-modal/register-modal.component';
 
 const icons = {
 
@@ -77,6 +78,7 @@ const icons = {
     UserHistoryPayComponent,
     UserEditComponent,
     UserPaymentComponent,
+    RegisterModalComponent,
 
   ],
   imports: [
