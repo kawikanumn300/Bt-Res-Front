@@ -2,15 +2,13 @@ import { Component, Input } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-login-modal',
-  templateUrl: './login-modal.component.html',
-  styleUrls: ['./login-modal.component.scss']
+  selector: 'app-register-modal',
+  templateUrl: './register-modal.component.html',
+  styleUrls: ['./register-modal.component.scss']
 })
-export class LoginModalComponent {
+export class RegisterModalComponent {
   @Input() myData!: string;
-  @Input() Title!: string;
   constructor(public activeModal: NgbActiveModal) {
 
   }
-
 }

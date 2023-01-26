@@ -7,22 +7,23 @@
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5" style="font-weight:bold;">ลงทะเบียน</h2>
 
-              <form (ngSubmit)="onSubmit()">
+              <div (ngSubmit)="onSubmit()">
                 <div class="row">
                   <div class="input-group mb-3 ">
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
-                    <input type="text" class="form-control" placeholder="บัญชีผู้ใช้" aria-label="Username" required
+                    <input type="text" class="form-control" placeholder="บัญชีผู้ใช้" aria-label="Username" required [(ngModel)]="username" 
                       aria-describedby="basic-addon1">
                   </div>
                   <div class="input-group mb-3 reg">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
-                    <input type="password" class="form-control" placeholder="รหัสผ่าน" aria-label="Password" required
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span> 
+                    <input type="password" class="form-control" placeholder="รหัสผ่าน" aria-label="Password" required [(ngModel)]="password" (change)="checkPasswordMatch()"
                       aria-describedby="basic-addon1">
                   </div>
                   <div class="input-group mb-3 reg">
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-unlock"></i></span>
-                    <input type="password" class="form-control" placeholder="ยืนยันรหัสผ่าน" aria-label="Password" required
+                    <input type="password" class="form-control" placeholder="ยืนยันรหัสผ่าน" aria-label="Password" required [(ngModel)]="confirmPassword" (change)="checkPasswordMatch()"
                       aria-describedby="basic-addon1">
+                    
                   </div>
                 </div>
 
@@ -31,33 +32,33 @@
                 <div class="row">
                   <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-users"></i></span>
-                    <input type="text" class="form-control" placeholder="ชื่อผู้ใช้" aria-label="" required
+                    <input type="text" class="form-control" placeholder="ชื่อผู้ใช้" id="fristname" required [(ngModel)]="fristname"
                       aria-describedby="basic-addon1">
                   </div>
                   <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1"><i class="fa-sharp fa-solid fa-diamond"></i></span>
-                    <input type="text" class="form-control" placeholder="นามสกุล" aria-label="" required
+                    <input type="text" class="form-control" placeholder="นามสกุล" id="" required [(ngModel)]="lastname"
                       aria-describedby="basic-addon1">
                   </div>
                 </div>
 
                 <div class="input-group mb-3 ">
                   <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-envelope"></i></span>
-                  <input type="text" class="form-control" placeholder="อีเมล์" aria-label="" required
+                  <input type="text" class="form-control" placeholder="อีเมล์" id="" required [(ngModel)]="email"
                     aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3 ">
                   <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-phone-volume"></i></span>
-                  <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์" aria-label="Username" required
+                  <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์" required [(ngModel)]="phone"
                     aria-describedby="basic-addon1">
                 </div>
 
-                <div class="d-flex justify-content-center mb-3 mb-lg-4">
-                  <button type="button" class="btn btn-primary btn-lg" style="font-weight:bold; font-size: large;">ยืนยันการลงทะเบียน</button>
+                <div class="d-flex justify-content-center mb-3 mb-lg-4" style="padding-top: 10px;">
+                  <button type="button" class="btn btn-primary btn-lg" style="font-weight:bold; font-size: large;" (click)="onSubmit()" [disabled]="!passwordMatch">ยืนยันการลงทะเบียน</button>
                 </div>
-
+                <p class="text-center mt-5 mb-0" *ngIf="!passwordMatch" style="color: red; font-weight: bold;">กรุณากรอก รหัสผ่านให้ตรงกัน !! </p>
                 <p class="text-center text-muted mt-5 mb-0" style="font-weight:bold;">มีบัญชีอยู่แล้ว? <a class="fw-bold text-body" routerLink="/login"><u style="color:#2c5b99;font-weight:bold;">เข้าสู่ระบบทันที</u></a></p>
-              </form>
+              </div>
 
             </div>
           </div>
