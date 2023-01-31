@@ -25,6 +25,12 @@
 //     }
 
 // }
+@media screen and (max-width:400px) {
+    .nav-flex{
+        padding-top: 40%;
+    }
+}
+
 .container-table {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;

@@ -11,12 +11,12 @@ import {
   NgbTypeaheadModule,
   NgbDatepickerModule,
   NgbAlertModule,
- NgbModalModule, NgbModalOptions,
+  NgbModalModule, NgbModalOptions,
 
   NgbPaginationModule,
 } from '@ng-bootstrap/ng-bootstrap';
 
-import {FoodListOrderDayComponent } from './component/food-list-order-day/food-list-order-day.component'
+import { FoodListOrderDayComponent } from './component/food-list-order-day/food-list-order-day.component'
 import { JsonPipe, NgIf } from '@angular/common';
 import { LoginComponent } from './component/main/login/login.component';
 import { NavbarComponent } from './component/main/navbar/navbar.component';
@@ -96,13 +96,13 @@ const icons = {
     NgbDatepickerModule,
     NgbAlertModule,
     JsonPipe,
-     NgbModalModule,
-		DecimalPipe,
-		FormsModule,
-		AsyncPipe,
-		NgbTypeaheadModule,
-		NgbPaginationModule,
-		NgIf,
+    NgbModalModule,
+    DecimalPipe,
+    FormsModule,
+    AsyncPipe,
+    NgbTypeaheadModule,
+    NgbPaginationModule,
+    NgIf,
 
   ],
   providers: [DecimalPipe],

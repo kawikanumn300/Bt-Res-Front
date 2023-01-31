@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<div class="container media-col full-screen">
+<div class="container media-col full-screen nav-flex">
   <div class="adjust-card">
     <div class="block-system-2">
       <div class="card-head  h-100">
@@ -14,7 +14,7 @@
     </div>
   </div>
 
-  <div style="padding-top: 3%;">
+  <div class="c-1" style="padding-top: 3%;">
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col block-system" *ngFor="let item of resdata; let i = index">
         <div class="card h-100" (click)="selectmenu(item.RES_ID)">

@@ -11,7 +11,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
-  constructor(private http: HttpClient , private modalService: NgbModal) { }
+  constructor(private http: HttpClient, private modalService: NgbModal) { }
   username: any;
   password: any;
   fristname: any;
@@ -21,6 +21,8 @@ export class RegisterComponent {
   value: any;
   confirmPassword: any;
   passwordMatch: boolean = true;
+  fulltextkey: boolean = true;
+
 
   checkPasswordMatch() {
     if (this.password === this.confirmPassword) {
@@ -41,6 +43,12 @@ export class RegisterComponent {
       USER_RIGHTS: 'U',
     };
     console.log(data);
+    if (this.username === '' || this.password === '' || this.fristname === '' || this.lastname === '' || this.email === '' || this.phone === '') {
+      const modalRef = this.modalService.open(RegisterModalComponent);
+      modalRef.componentInstance.myData = 'กรุณากรอกข้อมูลให้ครบถ้วน !!';
+    }
+    else {
+
 
     this.http.post(baseUrl, data)
       .subscribe(async response => {
@@ -55,7 +63,8 @@ export class RegisterComponent {
     // console.log(this.email)
     // console.log(this.phone)
     const modalRef = this.modalService.open(RegisterModalComponent);
-    modalRef.componentInstance.myData = 'การลงทะเบียนเสร็จสมบูรณ์ กด ยืนยัน เพื่อเข้าสผุ่ระบบ !!';
+    modalRef.componentInstance.myData = 'การลงทะเบียนเสร็จสมบูรณ์ กด ยืนยัน เพื่อเข้าสู่ระบบ !!';
   }
+}
 }
 

@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="isLoggedIn$">
 	<div class="container">
-		<a class="navbar-brand"><img src="assets/img/logo-tran.png" width="100px"> </a>
+		<div class="block-system"routerLink="/mainmenu">
+			<a class="navbar-brand"><img src="assets/img/logo-tran.png" width="100px"></a>
+		</div>
 		<div class="d-flex">
 			<!-- Button trigger modal -->
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -29,13 +31,13 @@
 							ข้อมูลผู้ใช้
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item"routerLink="/user-history-order">ประวัติการสั่งอาหาร</a></li>
+							<li><a class="dropdown-item" routerLink="/user-history-order">ประวัติการสั่งอาหาร</a></li>
 							<li><a class="dropdown-item" routerLink="/user-history-pay">ประวัติการชำระเงิน</a></li>
 							<li><a class="dropdown-item" routerLink="/user-edit">แก้ไขข้อมูลส่วนตัว</a></li>
 						</ul>
 					</li>
-					<li class="nav-item"(click)="logout()">
-						<a class="nav-link disabled" ><i class="fa-solid fa-door-open icon-nav"></i> ออกจากระบบ</a>
+					<li class="nav-item" (click)="logout()">
+						<a class="nav-link disabled"><i class="fa-solid fa-door-open icon-nav"></i> ออกจากระบบ</a>
 					</li>
 				</form>
 			</div>

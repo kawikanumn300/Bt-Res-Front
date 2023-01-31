@@ -15,7 +15,6 @@ export class FoodListMenuComponent {
   foodlistdata : any ;
   foodid : any ;
 
-
   constructor(private http: HttpClient, private router: Router ,private route: ActivatedRoute) {
   }
   ngOnInit() {
