@@ -13,8 +13,8 @@
         <legend class="col-form-label col-sm-2 pt-0">ราคาอาหาร</legend>
         <div class="col-sm-10">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-              value='{{foodnormal}}' (click)="checkoption($event)">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value='ธรรมดา'
+              (click)="checkprice($event)">
             <div class="row" style="padding-bottom: 10px;">
               <label class="form-check-label col-6 " for="gridRadios1">
                 ธรรมดา
@@ -25,8 +25,8 @@
             </div>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" 
-              value='{{foodspecial}}' (click)="checkoption($event)">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value='พิเศษ'
+              (click)="checkprice($event)">
             <div class="row" style="padding-bottom: 10px;">
               <label class="form-check-label col-6" for="gridRadios2">
                 พิเศษ
@@ -44,7 +44,8 @@
         <legend class="col-form-label col-sm-2 pt-0">เพิ่มเติม</legend>
         <div class="col-sm-10">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios2" id="gridRadios3" value="option3" checked>
+            <input class="form-check-input" type="radio" name="gridRadios2" id="gridRadios3" value='ไข่ดาว'
+              (click)="checkoption($event)">
             <div class="row" style="padding-bottom: 10px;">
               <label class="form-check-label col-6 " for="gridRadios3">
                 ไข่ดาว
@@ -55,7 +56,8 @@
             </div>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios2" id="gridRadios4" value="option4">
+            <input class="form-check-input" type="radio" name="gridRadios2" id="gridRadios4" value='ไข่เจียว'
+              (click)="checkoption($event)">
             <div class="row" style="padding-bottom: 10px;">
               <label class="form-check-label col-6" for="gridRadios4">
                 ไข่เจียว
@@ -81,7 +83,7 @@
 <div class="modal-footer">
   <div class="row">
     <div class="col-6-sum">
-      <label for="gridCheck1">ราคา </label>
+      <label for="gridCheck1">ราคา </label>{{this.result}}
     </div>
     <button type="submit" class="btn btn-primary col-5x20px" data-bs-dismiss="modal">ยืนยัน</button>
   </div>

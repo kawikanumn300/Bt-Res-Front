@@ -12,10 +12,14 @@ export class FoodSelectModalComponent implements OnInit {
   @Input() fooditem!: any;
   fooddata: any;
   foodname: any;
-  foodnormal: any;
-  foodspecial: any;
-  foodprice: number =0;
+  foodnormal = 0;
+  foodspecial = 0;
+  foodprice: string = "";
+  foodoption: any;
   result = 0;
+  optionprice: string = "";
+  option: any;
+
   constructor(public activeModal: NgbActiveModal, private http: HttpClient) {
 
   }
@@ -27,9 +31,47 @@ export class FoodSelectModalComponent implements OnInit {
       this.foodspecial = this.fooddata.FOOD_SPECIAL
     })
   }
+  checkprice(event: any) {
+    this.foodoption = event.target.value
+    if (this.foodoption === "ธรรมดา") {
+      this.foodprice = this.foodnormal.toString()
+      if (this.optionprice == "") {
+        this.result = parseInt(this.foodprice)
+        console.log(this.result)
+      } else {
+        this.result = parseInt(this.foodprice) + parseInt(this.optionprice);
+        console.log(this.result)
+      }
+    } else if (this.foodoption === "พิเศษ") {
+      this.foodprice = this.foodspecial.toString()
+      if (this.optionprice == "") {
+        this.result = parseInt(this.foodprice)
+        console.log(this.result)
+      } else {
+        this.result = parseInt(this.foodprice) + parseInt(this.optionprice);
+        console.log(this.result)
+      }
+    }
+  }
   checkoption(event: any) {
-    this.foodprice = event.target.value
-    this.result = this.foodprice + this.foodprice
-    console.log(this.foodprice)
+    this.option = event.target.value
+    if (this.option === "ไข่ดาว") {
+      this.optionprice = '10'
+      if (this.foodprice == "") {
+        this.result = parseInt(this.optionprice)
+      } else {
+        this.result = parseInt(this.foodprice) + parseInt(this.optionprice);
+        console.log(this.result)
+      }
+    } else if (this.option === "ไข่เจียว") {
+      this.optionprice = '10'
+      if (this.foodprice == "") {
+        this.result = parseInt(this.optionprice)
+      } else {
+        this.result = parseInt(this.foodprice) + parseInt(this.optionprice);
+        console.log(this.result)
+      }
+    }
+
   }
 }
