@@ -20,7 +20,7 @@
                 ธรรมดา
               </label>
               <label class="form-check-label col-5 " for="gridRadios1">
-                {{foodnormal}} <span> -.</span>
+                {{foodnormal}}
               </label>
             </div>
           </div>
@@ -32,7 +32,7 @@
                 พิเศษ
               </label>
               <label class="form-check-label col-5 " for="gridRadios2">
-                {{foodspecial}} <span> -.</span>
+                {{foodspecial}}
               </label>
             </div>
           </div>
@@ -51,7 +51,7 @@
                 ไข่ดาว
               </label>
               <label class="form-check-label col-5 " for="gridRadios3">
-                10<span> -.</span>
+                10
               </label>
             </div>
           </div>
@@ -63,7 +63,7 @@
                 ไข่เจียว
               </label>
               <label class="form-check-label col-5 " for="gridRadios4">
-                10<span> -.</span>
+                10
               </label>
             </div>
           </div>
@@ -83,7 +83,9 @@
 <div class="modal-footer">
   <div class="row">
     <div class="col-6-sum">
-      <label for="gridCheck1">ราคา </label>{{this.result}}
+
+      <label for="gridCheck1">ราคา </label>
+      <label for="" style="color: rgb(0, 212, 0);font-weight: bold;">&nbsp;{{this.result}}</label>
     </div>
     <button type="submit" class="btn btn-primary col-5x20px" data-bs-dismiss="modal">ยืนยัน</button>
   </div>

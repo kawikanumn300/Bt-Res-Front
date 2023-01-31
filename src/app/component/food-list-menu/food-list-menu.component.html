@@ -1,54 +1,39 @@
 <app-navbar></app-navbar>
 <div class="container" style="padding-top:5%;">
   <div class="service-40 py-4 wrap-feature40-box">
-    <div class="container">
+    <div class="container top-nav">
       <div class="row">
         <div class="col-lg-6">
           <img onerror="this.src='https://www.pf.co.th/blog/wp-content/uploads/2017/09/jocho_01.png'" src="{{resimage}}"
             class="card-img-top" alt="{{resname}}" alt="wrapkit" class="img-fluid" />
-        </div>
-        <div class="col-lg-6">
-          <div class="card border-0 mb-4">
-            <div class="card-body">
-              <h3 class="my-3 text-uppercase" style="font-weight: bold; padding-bottom: 10px;">{{resname}}
-              </h3>
-              <div class="row font-s">
-                <div class="my-4 row">
-                  <div class="col-5">
-                    <i class="fa-solid fa-phone-volume"></i>
-                  </div>
-                  <div class="col-6">
-                    {{resphone}}
-                  </div>
+          <div class="card-body">
+            <h3 class="my-3 text-uppercase" style="font-weight: bold; padding-bottom: 10px;padding-top: 20px;">{{resname}}
+            </h3>
+            <div class="font-s">
+              <div class="my-4 row">
+                <div class="col-5">
+                  <i class="fa-solid fa-phone-volume"></i>
+                </div>
+                <div class="col-6">
+                  {{resphone}}
                 </div>
               </div>
-              <div class="row font-s" style="padding-top: 10%">
-                <div class="my-4 row">
-                  <div class="col-5"> <i class="fa-sharp fa-solid fa-circle-info fa-icon-style"></i>
-                  </div>
-                  <div class="col-6">
-                    <!-- 16 ซ.สุขุมวิท 62 แขวง บางจาก เขตพระโขนง กรุงเทพมหานคร 10260 -->
-                    {{resdetail}}
-                  </div>
+            </div>
+            <div class="font-s" style="padding-top: 1%">
+              <div class="my-4 row">
+                <div class="col-5"> <i class="fa-sharp fa-solid fa-circle-info fa-icon-style"></i>
+                </div>
+                <div class="col-6">
+                  {{resdetail}}
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="col group scroll-bar">
+          <div class="col-md-card" *ngFor="let item of foodlistdata">
+            <div class="card border-0" *ngIf="item.RES_ID == this.idf">
 
-<div class="bg-light py-5 service-20">
-  <div class="container">
-    <!-- Row -->
-    <div class="row wrap-service-20">
-      <!-- Column -->
-      <div class="col-lg-6" *ngFor="let item of foodlistdata">
-        <div class="card border-0 mb-4" *ngIf="item.RES_ID == this.idf">
-          <div class="row no-gutters">
-            <div class="col-md-8">
               <div class="card-body d-flex">
                 <div class="mr-3 "><img
                     src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/features/feature13/img3.jpg"
@@ -60,16 +45,11 @@
                   <i class="fas fa-plus"></i>
                 </button>
               </div>
+
             </div>
           </div>
         </div>
-
       </div>
     </div>
-    <!-- Column -->
-
-
-    <!-- The Modal -->
-
   </div>
 </div>
