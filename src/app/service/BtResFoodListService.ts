@@ -15,9 +15,9 @@ export interface Value {
   FOOD_ID:        number;
   RES_ID:         number;
   FOOD_NAME:      string;
-  FOOD_PRICE:     string;
-  FOOD_NORMAL:    string;
-  FOOD_SPECIAL:   string;
+  FOOD_PRICE:     number;
+  FOOD_NORMAL:    number;
+  FOOD_SPECIAL:   number;
   FOOD_OPTION:    string;
   FOOD_NOTE:      string;
   RECORD_STATUS:  string;

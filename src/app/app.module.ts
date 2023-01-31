@@ -56,6 +56,7 @@ import { UserEditComponent } from './component/main/user-edit/user-edit.componen
 import { UserPaymentComponent } from './component/user-payment/user-payment.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterModalComponent } from './component/main/register-modal/register-modal.component';
+import { FoodSelectModalComponent } from './component/assete/food-select-modal/food-select-modal.component';
 
 const icons = {
 
@@ -79,6 +80,7 @@ const icons = {
     UserEditComponent,
     UserPaymentComponent,
     RegisterModalComponent,
+    FoodSelectModalComponent,
 
   ],
   imports: [

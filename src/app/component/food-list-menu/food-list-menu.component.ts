@@ -1,8 +1,10 @@
+import { FoodSelectModalComponent } from './../assete/food-select-modal/food-select-modal.component';
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BtResNameList, namelisturl} from 'src/app/service/BtResNameListService';
 import { BtResFoodList, foodlisturl} from 'src/app/service/BtResFoodListService';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-food-list-menu',
@@ -10,13 +12,16 @@ import { BtResFoodList, foodlisturl} from 'src/app/service/BtResFoodListService'
   styleUrls: ['./food-list-menu.component.scss']
 })
 export class FoodListMenuComponent {
+  resphone:any;
   resdata : any ;
   idf : any ;
   foodlistdata : any ;
   foodid : any ;
+  resimage:any;
+  resname:any;
+  resdetail:any;
 
-
-  constructor(private http: HttpClient, private router: Router ,private route: ActivatedRoute) {
+  constructor(private http: HttpClient, private router: Router ,private route: ActivatedRoute, private modalService: NgbModal) {
   }
   ngOnInit() {
     this.idf = this.route.snapshot.paramMap.get('id');
@@ -26,13 +31,21 @@ export class FoodListMenuComponent {
       this.resdata = response.Value;
       console.log('ข้อมูลร้านอาหาร');
       console.log(this.resdata);
+      this.resimage ="https://utcc-prc.demotoday.net/bt-order-api"+ this.resdata.RES_IMAGE;
+      this.resname =this.resdata.RES_NAME;
+      this.resphone =this.resdata.RES_PHONE;
+      this.resdetail =this.resdata.RES_DETAIL;
     })
     this.http.get<BtResFoodList>(foodlisturl).subscribe(response => {
       this.foodlistdata = response.Value;
       console.log('ข้อมูลรายการอาหาร');
       console.log(this.foodlistdata);
-      
+
     })
   }
+  foodselect(item:any){
+    const modalRef = this.modalService.open(FoodSelectModalComponent);
+    modalRef.componentInstance.fooditem = item ;
 
+  }
 }
