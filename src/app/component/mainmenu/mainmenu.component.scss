@@ -73,7 +73,17 @@
     border-radius: 0.5rem;
     width: 100%;
 }
-
+@media screen and (max-width:400px) {
+    .c-1 {
+        max-width: 85%;
+        margin-left: 7%;
+        padding-top: 1%;
+        align-self: center;
+    }
+    .nav-flex{
+        padding-top: 40%;
+    }
+}
 @media screen and (max-width:767px) {
     .img-banner {
         display: none;

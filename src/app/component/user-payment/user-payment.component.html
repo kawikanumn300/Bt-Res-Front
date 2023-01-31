@@ -1,1 +1,35 @@
-<p>user-payment works!</p>
+<app-navbar></app-navbar>
+<div class="nav-flex"></div>
+<div class="container" style="padding-top: 5%;">
+    <div class="row">
+        <div class="col-sm-5 col-md-6">
+            <img onerror="this.src='https://www.pf.co.th/blog/wp-content/uploads/2017/09/jocho_01.png'"
+                class="img-fluid" src="assets/img/4C2071D6-6AE2-4FF0-BBF2-2509E1C31064.jpg">
+
+
+        </div>
+        <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+            <form class="payment-form" action="your-payment-processing-script.php" method="post">
+                <div style="padding-top:20px"></div>
+                <label for="card-number">ช่องทางการชำระเงิน</label>
+                <select class="form-select css_i_select" aria-label="Default select example"
+                    (change)="onSelectChange($event)">
+                    <option value="B">ชำระเงินสด</option>
+                    <option value="A">ชำระผ่านธนาคาร</option>
+                </select>
+                <div style="padding-bottom: 20px;"></div>
+                <label for="card-number">ชื่อผู้ชำระเงิน</label>
+                <input type="text" id="card-number" name="card-number" [value]="this.getuser.USER_NAME" readonly>
+                <label for="card-expiry">จำนวนเงิน</label>
+                <input type="text" id="card-expiry" name="card-expiry" placeholder="บาท">
+
+                <div *ngIf="this.iSelect == 'A'"><label for="formFileMultiple"
+                        class="form-label">แนบหลักฐานการชำระเงิน</label>
+                    <input class="form-control" type="file" id="formFileMultiple" multiple />
+                </div>
+                <br>
+
+                <input type="submit" value="ยืนยันการชำระเงิน">
+            </form>
+        </div>
+    </div>

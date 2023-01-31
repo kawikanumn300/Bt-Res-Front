@@ -11,8 +11,11 @@
                 <div class="row">
                   <div class="input-group mb-3 ">
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
-                    <input type="text" class="form-control" placeholder="บัญชีผู้ใช้" aria-label="Username" required [(ngModel)]="username" 
+                    <input type="text" class="form-control" placeholder="บัญชีผู้ใช้" aria-label="Username" required [(ngModel)]="username" name="username"
                       aria-describedby="basic-addon1">
+                      <div *ngIf="username.invalid && username.touched" class="alert alert-danger">
+                        Name is required
+                      </div>
                   </div>
                   <div class="input-group mb-3 reg">
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span> 
@@ -56,7 +59,8 @@
                 <div class="d-flex justify-content-center mb-3 mb-lg-4" style="padding-top: 10px;">
                   <button type="button" class="btn btn-primary btn-lg" style="font-weight:bold; font-size: large;" (click)="onSubmit()" [disabled]="!passwordMatch">ยืนยันการลงทะเบียน</button>
                 </div>
-                <p class="text-center mt-5 mb-0" *ngIf="!passwordMatch" style="color: red; font-weight: bold;">กรุณากรอก รหัสผ่านให้ตรงกัน !! </p>
+                <p class="text-center mt-5 mb-0" *ngIf="!fulltextkey" style="color: red; font-weight: bold;">กรุณา กรอกข้อมูลให้ครบถ้วน !! </p>
+                <p class="text-center mt-5 mb-0" *ngIf="!passwordMatch" style="color: red; font-weight: bold;">กรุณา กรอกรหัสผ่านให้ตรงกัน !! </p>
                 <p class="text-center text-muted mt-5 mb-0" style="font-weight:bold;">มีบัญชีอยู่แล้ว? <a class="fw-bold text-body" routerLink="/login"><u style="color:#2c5b99;font-weight:bold;">เข้าสู่ระบบทันที</u></a></p>
               </div>
 
