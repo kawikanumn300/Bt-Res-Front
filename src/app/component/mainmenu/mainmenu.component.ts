@@ -14,14 +14,18 @@ export class MainmenuComponent implements OnInit {
   resimg: any;
   showImg: boolean = true;
 
-  constructor(private http: HttpClient, private router: Router ,private navbarService: NavbarService) {
+  constructor(private http: HttpClient, private router: Router, private navbarService: NavbarService) {
   }
   ngOnInit() {
     this.http.get<BtResNameList>(namelisturl).subscribe(response => {
       this.resdata = response.Value;
       console.log(this.resdata);
+
     })
-  }handleClick() {
+
+  }
+
+  handleClick() {
     this.navbarService.showNavbar(false);
   }
 
@@ -31,7 +35,8 @@ export class MainmenuComponent implements OnInit {
   }
   selectmenu(item: any) {
     console.log(item);
-    this.router.navigate(['/food-list-menu' ,{ id : item}]);
+    this.router.navigate(['/food-list-menu', { id: item }]);
 
   }
 }
+
