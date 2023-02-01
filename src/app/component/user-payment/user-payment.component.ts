@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserPaymentComponent implements OnInit {
 
-  iSelect: any;
+  iSelect: any = 'B';
   getuser: any;
   onSelectChange(event: any) {
     this.iSelect = event.target.value;

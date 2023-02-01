@@ -2,11 +2,11 @@
 <div class="nav-flex"></div>
 <div class="container" style="padding-top: 5%;">
     <div class="row">
-        <div class="col-sm-5 col-md-6">
-            <img onerror="this.src='https://www.pf.co.th/blog/wp-content/uploads/2017/09/jocho_01.png'"
-                class="img-fluid" src="assets/img/qrcode.PNG">
-
-
+        <div class="col-sm-5 col-md-6" *ngIf="this.iSelect == 'A'">
+            <img class="img-fluid" src="assets/img/qrcode.PNG">
+        </div>
+        <div class="col-sm-5 col-md-6" *ngIf="this.iSelect == 'B'">
+            <img class="img-fluid pay-img-s" src="assets/img/pay.PNG"><br>
         </div>
         <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
             <form class="payment-form" action="your-payment-processing-script.php" method="post">
