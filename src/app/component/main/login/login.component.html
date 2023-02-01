@@ -1,3 +1,12 @@
+<div class="my-container">
+  <ng-template #customLoadingTemplate>
+    <div class="custom-class">
+      <h3>Loading...</h3>
+    </div>
+  </ng-template>
+  <ngx-loading [show]="isload" [config]="{ backdropBorderRadius: '3px' }"
+    [template]="customLoadingTemplate"></ngx-loading>
+</div>
 <section class="vh-100" style="background: url('assets/img/bg.png');">
   <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -31,7 +40,8 @@
                           routerLink="/register">สมัคสมาชิก</a></span>
                     </div>
                     <div class=" help">
-                      <span><a class="reset-password" tabindex="5" style="color: red; font-weight:bold;" (click)="forgetpassword()">ลืมรหัสผ่าน
+                      <span><a class="reset-password" tabindex="5" style="color: red; font-weight:bold;"
+                          (click)="forgetpassword()">ลืมรหัสผ่าน
                           ?</a></span>
                     </div>
                   </div>

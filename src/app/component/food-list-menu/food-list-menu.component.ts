@@ -20,6 +20,7 @@ export class FoodListMenuComponent {
   resimage:any;
   resname:any;
   resdetail:any;
+  foodimg:any;
 
   constructor(private http: HttpClient, private router: Router ,private route: ActivatedRoute, private modalService: NgbModal) {
   }
@@ -35,12 +36,14 @@ export class FoodListMenuComponent {
       this.resname =this.resdata.RES_NAME;
       this.resphone =this.resdata.RES_PHONE;
       this.resdetail =this.resdata.RES_DETAIL;
+
     })
     this.http.get<BtResFoodList>(foodlisturl).subscribe(response => {
       this.foodlistdata = response.Value;
       console.log('ข้อมูลรายการอาหาร');
       console.log(this.foodlistdata);
-
+      this.foodimg = this.foodlistdata.FOOD_IMAGE
+      console.log(this.foodimg);
     })
   }
   foodselect(item:any){

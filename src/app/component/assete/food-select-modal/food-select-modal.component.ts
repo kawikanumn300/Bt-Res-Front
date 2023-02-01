@@ -19,7 +19,7 @@ export class FoodSelectModalComponent implements OnInit {
   result = 0;
   optionprice: string = "";
   option: any;
-
+  fooddetail:string ="";
   constructor(public activeModal: NgbActiveModal, private http: HttpClient) {
 
   }
@@ -73,5 +73,16 @@ export class FoodSelectModalComponent implements OnInit {
       }
     }
 
+  }
+  onValueChange(event: Event): void {
+    const value = (event.target as any).value;
+    this.fooddetail = value;
+  }
+  submit(){
+    this.activeModal.close(true);
+    console.log(this.foodoption)
+    console.log(this.option)
+    console.log(this.fooddetail)
+    console.log(this.result)
   }
 }

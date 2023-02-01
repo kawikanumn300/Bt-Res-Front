@@ -22,14 +22,17 @@ export class LoginComponent {
   value: any;
   response: any;
   nameofuser: any;
-  sess:any;
+  sess: any;
+  isload = false;
   constructor(private http: HttpClient, private router: Router, private modalService: NgbModal) { }
 
-  onSubmit() {
+ async onSubmit() {
     const data = { USER_USERNAME: this.username, USER_PASSWORD: this.password };
-    this.http.post(baseUrl + '/login', data, {
+     this.isload = true;
+   await this.http.post(baseUrl + '/login', data, {
       headers: new HttpHeaders().set('Content-Type', 'application/json')
     }).subscribe(async response => {
+      this.isload = false;
       this.value = response;
       console.log(this.value);
 
@@ -56,7 +59,7 @@ export class LoginComponent {
         modalRef.componentInstance.myData = 'Username หรือ Password ไม่ถูกต้อง !! กรุณา เข้าสู่ระบบอีกครัง ';
         modalRef.componentInstance.Title = 'ล้มเหลว';
         console.log("user or pass error");
-        
+
 
         this.username = "";
         this.password = "";
@@ -67,10 +70,10 @@ export class LoginComponent {
     });
     console.log(data);
   }
-  forgetpassword(){
+  forgetpassword() {
     const modalRef = this.modalService.open(LoginModalComponent);
     modalRef.componentInstance.myData = 'กรุณาติดต่อเจ้าหน้าที่';
     modalRef.componentInstance.Title = 'ลืมรหัสผ่าน';
-    
+
   }
 }

@@ -25,6 +25,7 @@ import { MainmenuComponent } from './component/mainmenu/mainmenu.component';
 import { FooterComponent } from './component/main/footer/footer.component';
 import { FoodListMenuComponent } from './component/food-list-menu/food-list-menu.component';
 import { AsyncPipe, DecimalPipe, NgFor } from '@angular/common';
+import { NgxLoadingModule } from "ngx-loading";
 
 // import {
 //   DxButtonModule,
@@ -82,6 +83,7 @@ const icons = {
     RegisterModalComponent,
     FoodSelectModalComponent,
 
+
   ],
   imports: [
     BrowserModule,
@@ -105,6 +107,7 @@ const icons = {
     NgbTypeaheadModule,
     NgbPaginationModule,
     NgIf,
+    NgxLoadingModule.forRoot({}),
 
   ],
   providers: [DecimalPipe],

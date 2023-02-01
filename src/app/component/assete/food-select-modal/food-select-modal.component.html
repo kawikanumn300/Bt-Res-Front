@@ -71,8 +71,9 @@
       </div>
     </fieldset>
     <div class="form-floating" style="padding-top:10px;">
-      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-        style="height: 100px"></textarea>
+      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"
+      [value]="fooddetail" (input)="onValueChange($event)">
+      </textarea>
       <label for="floatingTextarea2">กรุณาระบุความต้องการอื่นๆ เช่น เผ็ดน้อย !!
         (ถ้ามี)</label>
     </div>
@@ -87,6 +88,6 @@
       <label for="gridCheck1">ราคา </label>
       <label for="" style="color: rgb(0, 212, 0);font-weight: bold;">&nbsp;{{this.result}}</label>
     </div>
-    <button type="submit" class="btn btn-primary col-5x20px" data-bs-dismiss="modal">ยืนยัน</button>
+    <button type="button" class="btn btn-primary col-5x20px" (click)="submit()">ยืนยัน</button>
   </div>
 </div>
