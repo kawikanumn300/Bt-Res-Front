@@ -22,7 +22,7 @@
 }
 
 .card {
-    width: 50%;
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -31,9 +31,13 @@
     word-wrap: break-word;
     background-color: var(--bs-card-bg);
     background-clip: border-box;
-    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    border: var(--bs-card-border-width) solid rgb(0 0 0 / 0%);
     border-radius: var(--bs-card-border-radius);
 }
 datagrid-borders > .dx-datagrid-headers {
     border-top: 1px solid rgb(0, 0, 0);
+}
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: rgb(255 255 255);
+    color: #838383;
 }

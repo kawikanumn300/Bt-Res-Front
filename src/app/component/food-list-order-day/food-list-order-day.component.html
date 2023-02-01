@@ -1,20 +1,8 @@
 <app-navbar></app-navbar>
 <div class="nav-flex"></div>
 <div class="container" style="padding-top:5%;">
-  <h1 style="font-weight: bold;">รายการสั่งอาหารประจำวันนี้</h1>
+  <h4 style="font-weight: bold;">รายการสั่งอาหารประจำวันนี้</h4>
   <div class="card">
-    <div class="card-body">
-      <div class="row">
-        <div style="padding-top: 2%;"></div>
-        <div class="mb-3 row-edit">
-          <label for="table-filtering-search" class="col-xs-3 col-sm-auto col-form-label"
-            style="padding-right: 2%;">ค้นหา:</label>
-          <div class="col-xs-3 col-sm-auto">
-            <input id="table-filtering-search" class="form-control" type="text" [formControl]="filter" />
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="container-table">
       <table class="table table-striped">
         <thead>
@@ -29,8 +17,8 @@
           <tr *ngIf="(bill.CREATE_DATE | date: 'yyyy-MM-dd') !== (datenow | date: 'yyyy-MM-dd')">
 
             <th scope="row">{{ i + 1 }}</th>
-            <td><input type="text" >
-                {{bill.USER_ID }}
+            <td>
+              {{bill.USER_ID }}
             </td>
             <td>{{bill.FOOD_ID}} </td>
             <td>{{bill.BILL_RESULT}}</td>
