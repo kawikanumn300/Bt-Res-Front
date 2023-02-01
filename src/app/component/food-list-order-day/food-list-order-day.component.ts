@@ -19,12 +19,15 @@ constructor(private http:HttpClient){
   billdata:any;
   datenow = Date();
   userdata:any;
+  userid:any
   usershow=""
-  
+
   ngOnInit(): void {
     this.http.get<BtResUserBill>(userbill).subscribe(response=>{
       this.billdata= response.Value
       console.log(this.billdata)
+      this.userid = this.billdata.USER_ID
+      console.log(this.userid)
     })
 
     console.log(this.userdata)

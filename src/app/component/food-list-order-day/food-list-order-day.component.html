@@ -3,27 +3,42 @@
 <div class="container" style="padding-top:5%;">
   <h1 style="font-weight: bold;">รายการสั่งอาหารประจำวันนี้</h1>
   <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div style="padding-top: 2%;"></div>
+        <div class="mb-3 row-edit">
+          <label for="table-filtering-search" class="col-xs-3 col-sm-auto col-form-label"
+            style="padding-right: 2%;">ค้นหา:</label>
+          <div class="col-xs-3 col-sm-auto">
+            <input id="table-filtering-search" class="form-control" type="text" [formControl]="filter" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-table">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ลำดับ</th>
+            <th scope="col">ชื่อผู้สั่ง</th>
+            <th scope="col">ชื่ออาหาร</th>
+            <th scope="col">ราคา </th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let bill of billdata ; index as i">
+          <tr *ngIf="(bill.CREATE_DATE | date: 'yyyy-MM-dd') !== (datenow | date: 'yyyy-MM-dd')">
 
-    <dx-data-grid #dataGrid id="gridContainer" style="margin: auto;" [dataSource]="billdata" keyExpr="BILL_ID"
-    [showBorders]="true" noDataText="ไม่มีข้อมูล" >
-    <dxo-search-panel [visible]="true" [width]="240" placeholder="ค้นหา..." location="before"></dxo-search-panel>
+            <th scope="row">{{ i + 1 }}</th>
+            <td><input type="text" >
+                {{bill.USER_ID }}
+            </td>
+            <td>{{bill.FOOD_ID}} </td>
+            <td>{{bill.BILL_RESULT}}</td>
+          </tr>
 
-    <dxi-column caption="ลำดับ" [width]="50" [allowFiltering]="false" [allowSorting]="false" dataField=""
-    cellTemplate="cellTemplate" alignment="center">
-    </dxi-column>
-    <dxi-column alignment="center" caption="ชื่อผู้ใช้" dataField="USER_ID" [width]="230">
-    </dxi-column>
-    <dxi-column alignment="center" caption="ชื่อจริง" dataField="FOOD_ID" [width]="170">
-    </dxi-column>
-    <dxi-column alignment="center" caption="ชื่ออาหาร" dataField="RES_ID" [width]="170">
-    </dxi-column>
-    <dxi-column alignment="center" caption="ราคารวม" dataField="BILL_RESULT" [width]="215">
-    </dxi-column>
-    <div *dxTemplate="let cell of 'cellTemplate'">
-      {{ cell.component.pageIndex() * cell.component.pageSize() + cell.rowIndex + 1 }}
+        </tbody>
+      </table>
 
     </div>
-  </dx-data-grid>
   </div>
 </div>
-
