@@ -132,6 +132,7 @@
     position: relative;
     padding-right: 15px;
     padding-left: 15px;
+    border-radius: 10px;
 }
 
 .col-5 {
@@ -225,6 +226,12 @@
 .col-sm-10 {
     flex: 0 0 auto;
     width: 100%;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .group {

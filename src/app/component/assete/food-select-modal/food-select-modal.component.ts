@@ -2,6 +2,7 @@ import { foodlisturl, BtResFoodList } from 'src/app/service/BtResFoodListService
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-food-select-modal',
@@ -20,7 +21,9 @@ export class FoodSelectModalComponent implements OnInit {
   optionprice: string = "";
   option: any;
   fooddetail:string ="";
-  constructor(public activeModal: NgbActiveModal, private http: HttpClient) {
+  
+
+  constructor(public activeModal: NgbActiveModal, private http: HttpClient ,private rounte : Router) {
 
   }
   ngOnInit(): void {
@@ -79,10 +82,7 @@ export class FoodSelectModalComponent implements OnInit {
     this.fooddetail = value;
   }
   submit(){
-    this.activeModal.close(true);
-    console.log(this.foodoption)
-    console.log(this.option)
-    console.log(this.fooddetail)
-    console.log(this.result)
+    this.activeModal.close(true)
+    this.rounte.navigate(['/user-paybill'])
   }
 }
