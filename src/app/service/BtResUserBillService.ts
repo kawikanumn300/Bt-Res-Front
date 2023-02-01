@@ -19,7 +19,7 @@ export interface Value {
   CREATE_USER_ID: number;
   UPDATE_USER_ID: number;
   USER_STATUS: string;
-  CREATE_DATE: Date;
+  CREATE_DATE: Date | 'yyyy-MM-dd';
   UPDATE_DATE: Date;
   BILL_NOTE: string;
   BILL_OPTION: string;

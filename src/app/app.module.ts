@@ -27,27 +27,26 @@ import { FoodListMenuComponent } from './component/food-list-menu/food-list-menu
 import { AsyncPipe, DecimalPipe, NgFor } from '@angular/common';
 import { NgxLoadingModule } from "ngx-loading";
 
-// import {
-//   DxButtonModule,
-//   DxCheckBoxModule,
-//   DxDateBoxModule,
-//   DxListModule,
-//   DxLoadIndicatorModule,
-//   DxLoadPanelModule,
-//   DxSelectBoxModule,
-//   DxValidationSummaryModule,
-//   DxValidatorModule,
-//   DxRadioGroupModule,
-//   DxGalleryModule,
-//   DxCalendarModule,
-//   DxDataGridModule,
-//   DxBulletModule,
-//   DxTemplateModule,
-//   DxTextBoxModule,
-//   DxFormModule,
-//   DxTooltipModule,
-
-// } from 'devextreme-angular';
+import {
+  DxButtonModule,
+  DxCheckBoxModule,
+  DxDateBoxModule,
+  DxListModule,
+  DxLoadIndicatorModule,
+  DxLoadPanelModule,
+  DxSelectBoxModule,
+  DxValidationSummaryModule,
+  DxValidatorModule,
+  DxRadioGroupModule,
+  DxGalleryModule,
+  DxCalendarModule,
+  DxDataGridModule,
+  DxBulletModule,
+  DxTemplateModule,
+  DxTextBoxModule,
+  DxFormModule,
+  DxTooltipModule,DxRangeSelectorModule
+} from 'devextreme-angular';
 import { LogoutModalComponent } from './component/main/logout-modal/logout-modal.component';
 import { LoginModalComponent } from './component/main/login-modal/login-modal.component';
 
@@ -110,6 +109,7 @@ const icons = {
     NgbPaginationModule,
     NgIf,
     NgxLoadingModule.forRoot({}),
+    DxDataGridModule,DxRangeSelectorModule
 
   ],
   providers: [DecimalPipe],
