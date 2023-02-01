@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, PipeTransform, OnInit } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-
 import { BtResUserBill, userbill } from 'src/app/service/BtResUserBillService';
 import { BtResUser, baseUrl } from 'src/app/service/BtResUserService';
 
+import { combineLatest } from 'rxjs';
 
 
 @Component({
@@ -20,17 +20,20 @@ constructor(private http:HttpClient){
   datenow = Date();
   userdata:any;
   userid:any
-  usershow=""
-
+  usershow:any
+  joinedData:any
   ngOnInit(): void {
     this.http.get<BtResUserBill>(userbill).subscribe(response=>{
       this.billdata= response.Value
       console.log(this.billdata)
-      this.userid = this.billdata.USER_ID
-      console.log(this.userid)
-    })
+    });
 
-    console.log(this.userdata)
+    this.http.get<BtResUser>(baseUrl).subscribe(response=>{
+      this.userdata= response.Value
+      console.log(this.userdata)
+    });
+
+  
   }
 
     // await this.http.get<BtResUser>(baseUrl+'/').subscribe(response=>{
@@ -38,6 +41,8 @@ constructor(private http:HttpClient){
     //   console.log(this.userdata.USER_USERNAME)
 
     // })
+
+
   }
 
 

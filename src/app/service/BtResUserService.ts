@@ -13,7 +13,6 @@ export interface BtResUser  {
 }
 
 export interface Value {
-  [x: string]: any;
   USER_ID: number;
   USER_NAME: string;
   USER_LASTNAME: string;

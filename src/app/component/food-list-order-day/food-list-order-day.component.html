@@ -29,7 +29,7 @@
           <tr *ngIf="(bill.CREATE_DATE | date: 'yyyy-MM-dd') !== (datenow | date: 'yyyy-MM-dd')">
 
             <th scope="row">{{ i + 1 }}</th>
-            <td><input type="text" >
+            <td>
                 {{bill.USER_ID }}
             </td>
             <td>{{bill.FOOD_ID}} </td>
