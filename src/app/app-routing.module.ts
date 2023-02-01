@@ -11,6 +11,7 @@ import { UserEditComponent } from './component/main/user-edit/user-edit.componen
 import { MainmenuComponent } from './component/mainmenu/mainmenu.component';
 import { UserHistoryOrderComponent } from './component/user-history-order/user-history-order.component';
 import { UserHistoryPayComponent } from './component/user-history-pay/user-history-pay.component';
+import { UserPaybillComponent } from './component/user-paybill/user-paybill.component';
 import { UserPaymentComponent } from './component/user-payment/user-payment.component';
 
 
@@ -64,6 +65,10 @@ const routes: Routes = [
   {
     path:"user-payment",
     component:UserPaymentComponent
+  },
+  {
+    path:"user-paybill",
+    component:UserPaybillComponent
   }
 ];
 
