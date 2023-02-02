@@ -4,6 +4,7 @@ import { Component, PipeTransform, OnInit } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { BtResUserBill, userbill } from 'src/app/service/BtResUserBillService';
 import { BtResUser, baseUrl } from 'src/app/service/BtResUserService';
+import { debounceTime, Subject } from 'rxjs';
 
 
 
@@ -22,7 +23,10 @@ export class FoodListOrderDayComponent implements OnInit {
   userid: any
   usershow: any
   fooddata: any
+  searchValue = '';
+  public searchTerm$ = new Subject<string>();
   ngOnInit(): void {
+    this.searchTerm$.pipe(debounceTime(500)).subscribe(term => this.searchValue = term);
     this.http.get<BtResUserBill>(userbill).subscribe(response => {
       this.billdata = response.Value
       console.log(this.billdata)

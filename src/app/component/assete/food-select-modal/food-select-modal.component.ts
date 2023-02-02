@@ -21,7 +21,7 @@ export class FoodSelectModalComponent implements OnInit {
   optionprice: string = "";
   option: any;
   fooddetail:string ="";
-  
+
 
   constructor(public activeModal: NgbActiveModal, private http: HttpClient ,private rounte : Router) {
 
@@ -87,6 +87,10 @@ export class FoodSelectModalComponent implements OnInit {
     this.fooddetail = value;
   }
   submit(){
+    const data ={
+      
+    }
+
     this.activeModal.close(true)
     this.rounte.navigate(['/user-paybill'])
   }
