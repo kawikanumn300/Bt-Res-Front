@@ -58,6 +58,7 @@ export class FoodSelectModalComponent implements OnInit {
   }
   checkoption(event: any) {
     this.option = event.target.value
+    console.log(this.option)
     if (this.option === "ไข่ดาว") {
       this.optionprice = '10'
       if (this.foodprice == "") {
@@ -76,6 +77,10 @@ export class FoodSelectModalComponent implements OnInit {
       }
     }
 
+  }
+  checkoptionnooder(event: any) {
+    this.option = event.target.value
+    console.log(this.option)
   }
   onValueChange(event: Event): void {
     const value = (event.target as any).value;

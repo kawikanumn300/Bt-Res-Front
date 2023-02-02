@@ -11,6 +11,7 @@
     <fieldset class="form-group">
       <div class="row">
         <legend class="col-form-label col-sm-2 pt-0">ราคาอาหาร</legend>
+        <legend class="col-form-label col-sm-2 pt-0" style="float: right;">บาท</legend>
         <div class="col-sm-10">
           <div class="form-check">
             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value='ธรรมดา'
@@ -41,7 +42,7 @@
     </fieldset>
     <fieldset class="form-group">
       <div class="row">
-        <legend class="col-form-label col-sm-2 pt-0">เพิ่มเติม</legend>
+        <legend class="col-form-label col-sm-2 pt-0">เพิ่มเติม (เมนูข้าว)</legend>
         <div class="col-sm-10">
           <div class="form-check">
             <input class="form-check-input" type="radio" name="gridRadios2" id="gridRadios3" value='ไข่ดาว'
@@ -69,6 +70,49 @@
           </div>
         </div>
       </div>
+      <fieldset class="form-group" style="padding-top:10px ;">
+        <div class="row">
+          <legend class="col-form-label col-sm-2 pt-0">เพิ่มเติม (เมนูก๋วยเตี๋ยว)</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios3" id="gridRadios5" value='เส้นเล็ก'
+                (click)="checkoptionnooder($event)">
+              <div class="row" style="padding-bottom: 10px;">
+                <label class="form-check-label col-6 " for="gridRadios5">
+                  เส้นเล็ก
+                </label>
+                <label class="form-check-label col-5 " for="gridRadios5">
+                  0
+                </label>
+              </div>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios3" id="gridRadios6" value='เส้นใหญ'
+                (click)="checkoptionnooder($event)">
+              <div class="row" style="padding-bottom: 10px;">
+                <label class="form-check-label col-6" for="gridRadios6">
+                  เส้นใหญ
+                </label>
+                <label class="form-check-label col-5 " for="gridRadios6">
+                  0
+                </label>
+              </div>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios3" id="gridRadios7" value='เส้นบะหมี่'
+                (click)="checkoptionnooder($event)">
+              <div class="row" style="padding-bottom: 10px;">
+                <label class="form-check-label col-6" for="gridRadios7">
+                  เส้นบะหมี่
+                </label>
+                <label class="form-check-label col-5 " for="gridRadios7">
+                  0
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
     </fieldset>
     <div class="form-floating" style="padding-top:10px;">
       <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"
