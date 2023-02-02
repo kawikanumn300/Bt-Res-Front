@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { baseUrl, BtResUser } from 'src/app/service/BtResUserService';
 import { LoginModalComponent } from '../login-modal/login-modal.component';
+import { RegisterModalComponent } from '../register-modal/register-modal.component';
 
 @Component({
   selector: 'app-user-edit',
@@ -20,18 +21,9 @@ export class UserEditComponent implements OnInit {
   phone: any
   id: any;
   userdata: any
-  passwordMatch: boolean = true;
-  confirmPassword: any;
+  confirmpassword: any
+  passwordMatch = false;
   fulltextkey: boolean = true;
-
-    checkPasswordMatch() {
-    if (this.password === this.confirmPassword) {
-      this.passwordMatch = true;
-    } else {
-      this.passwordMatch = false;
-    }
-  }
-
   ngOnInit(): void {
     const data = JSON.parse(sessionStorage.getItem('key') || '{}');
     this.getuser = data.Value
@@ -42,7 +34,6 @@ export class UserEditComponent implements OnInit {
       // console.log(this.userdata)
       this.username = this.userdata.USER_USERNAME
       this.password = this.userdata.USER_PASSWORD
-      this.confirmPassword = this.userdata.USER_PASSWORD
       this.name = this.userdata.USER_NAME
       this.lastname = this.userdata.USER_LASTNAME
       this.email = this.userdata.USER_EMAIL
@@ -60,14 +51,26 @@ export class UserEditComponent implements OnInit {
       USER_LASTNAME: this.lastname,
       USER_EMAIL: this.email,
       USER_PHONE_NUMBER: this.phone,
-    };
-    // console.log(data)
-    this.http.put(baseUrl + '/' + this.id, data)
-      .subscribe(response => {
-        // console.log(response);
-        const modalRef = this.modalService.open(LoginModalComponent);
-        modalRef.componentInstance.myData = 'แก้ใขข้อมูลสำเร็จ';
-        modalRef.componentInstance.Title = 'สำเร็จ';
-      })
+    }
+    if (this.username === '' || this.password === '' || this.name === '' || this.lastname === '' || this.email === '' || this.phone === '') {
+      this.fulltextkey=false
+    }
+    else {
+      // console.log(data)
+      this.http.put(baseUrl + '/' + this.id, data)
+        .subscribe(response => {
+          // console.log(response);
+          const modalRef = this.modalService.open(LoginModalComponent);
+          modalRef.componentInstance.myData = 'แก้ใขข้อมูลสำเร็จ';
+          modalRef.componentInstance.Title = 'สำเร็จ';
+        })
+    }
+  }
+  checkPasswordMatch() {
+    if (this.password === this.confirmpassword) {
+      this.passwordMatch = true;
+    } else {
+      this.passwordMatch = false;
+    }
   }
 }
