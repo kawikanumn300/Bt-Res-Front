@@ -21,16 +21,15 @@
                                         <span class="input-group-text" id="basic-addon1"><i
                                                 class="fa-solid fa-lock"></i></span>
                                         <input type="password" class="form-control" placeholder="รหัสผ่าน"
-                                            aria-label="Password" required aria-describedby="basic-addon1"[(ngModel)]="password">
+                                            aria-label="Password" required aria-describedby="basic-addon1"[(ngModel)]="password" (change)="checkPasswordMatch()">
                                     </div>
                                     <div class="input-group mb-3 reg">
                                         <span class="input-group-text" id="basic-addon1"><i
                                                 class="fa-solid fa-unlock"></i></span>
                                         <input type="password" class="form-control" placeholder="ยืนยันรหัสผ่าน"
-                                            aria-label="Password" required aria-describedby="basic-addon1"[(ngModel)]="password">
+                                            aria-label="Password" required aria-describedby="basic-addon1"[(ngModel)]="confirmpassword" (change)="checkPasswordMatch()">
                                     </div>
                                 </div>
-
                                 <p style="padding-top: 1.5rem; font-weight:bold;">ข้อมูล ผู้ใช้</p>
 
                                 <div class="row">
@@ -63,8 +62,10 @@
 
                                 <div class="d-flex justify-content-center mb-3 mb-lg-4">
                                     <button type="button" class="btn btn-primary btn-lg"
-                                        style="font-weight:bold; font-size: large;"(click)="onSubmit()">ยืนยันการแก้ไขข้อมูล</button>
-                                </div>
+                                        style="font-weight:bold; font-size: large;"(click)="onSubmit()" [disabled]="!passwordMatch">ยืนยันการแก้ไขข้อมูล</button>
+                                        <p class="text-center mt-5 mb-0" *ngIf="!fulltextkey" style="color: red; font-weight: bold;">กรุณา กรอกข้อมูลให้ครบถ้วน !! </p>
+                                        <p class="text-center mt-5 mb-0" *ngIf="!passwordMatch" style="color: red; font-weight: bold;">กรุณา กรอกรหัสผ่านให้ตรงกัน !! </p>
+                                      </div>
                               </div>
                         </div>
                     </div>

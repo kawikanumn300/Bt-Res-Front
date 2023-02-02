@@ -50,21 +50,21 @@ export class RegisterComponent {
     else {
 
 
-    this.http.post(baseUrl, data)
-      .subscribe(async response => {
-        this.value = response;
-        console.log(this.value);
-      })
+      this.http.post(baseUrl, data)
+        .subscribe(async response => {
+          this.value = response;
+          console.log(this.value);
+        })
 
-    // console.log(this.username)
-    // console.log(this.password)
-    // console.log(this.fristname)
-    // console.log(this.lastname)
-    // console.log(this.email)
-    // console.log(this.phone)
-    const modalRef = this.modalService.open(RegisterModalComponent);
-    modalRef.componentInstance.myData = 'การลงทะเบียนเสร็จสมบูรณ์ กด ยืนยัน เพื่อเข้าสู่ระบบ !!';
+      // console.log(this.username)
+      // console.log(this.password)
+      // console.log(this.fristname)
+      // console.log(this.lastname)
+      // console.log(this.email)
+      // console.log(this.phone)
+      const modalRef = this.modalService.open(RegisterModalComponent);
+      modalRef.componentInstance.myData = 'การลงทะเบียนเสร็จสมบูรณ์ กด ยืนยัน เพื่อเข้าสู่ระบบ !!';
+    }
   }
-}
 }
 
