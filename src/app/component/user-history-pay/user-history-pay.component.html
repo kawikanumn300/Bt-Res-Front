@@ -1,25 +1,23 @@
 <app-navbar></app-navbar>
 <div class="nav-flex"></div>
-<div class="container"style="padding-top:5%;">
-	<h1 style="font-weight: bold;">ประวัติการชำระเงิน</h1>
-	<div class="card">
-		<div class="card-body">
-			<div class="row">
-				<div style="padding-top: 2%;"></div>
-				<div class="mb-3 row-edit">
-					<label for="table-filtering-search" class="col-xs-3 col-sm-auto col-form-label"
-						style="padding-right: 2%;">ค้นหา:</label>
-					<div class="col-xs-3 col-sm-auto">
-						<input id="table-filtering-search" class="form-control" type="text" [formControl]="filter" />
-					</div>
-				</div>
+<div class="container" style="padding-top:5%;">
+	<div class="container">
+		<div class="row">
+			<h3 style="font-weight: bold;">ประวัติการชำระเงิน</h3>
+		</div>
+		<div class="input-group input-group-res mb-3">
+			<input type="text" class="form-control" placeholder="Search" aria-label="Search"
+				aria-describedby="basic-addon2">
+			<div class="input-group-append">
+				<span class="input-group-text" id="search-btn">Search</span>
 			</div>
 		</div>
+	</div>
 		<div class="container-table">
 			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th scope="col">วันที่</th>
+						<th scope="col">ลำดับ</th>
 						<th scope="col">ชื่ออาหาร</th>
 						<th scope="col">ราคา</th>
 						<th scope="col">ใบเสร็จ</th>
@@ -42,4 +40,3 @@
 			
 		</div>
 	</div>
-</div>

@@ -26,7 +26,7 @@
 
 // }
 @media screen and (max-width:400px) {
-    .nav-flex{
+    .nav-flex {
         padding-top: 40%;
     }
 }
@@ -48,6 +48,7 @@
     flex-wrap: nowrap;
     margin-top: calc(-1 * var(--bs-gutter-y));
 }
+
 .card {
     --bs-card-spacer-y: 1rem;
     --bs-card-spacer-x: 1rem;
@@ -76,4 +77,60 @@
     background-clip: border-box;
     border: var(--bs-card-border-width) solid var(--bs-card-border-color);
     border-radius: var(--bs-card-border-radius);
+}
+
+@media screen and (min-width:401px) {
+    .input-group-res {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        width: 20%;
+        float: right;
+    }
+}
+
+.datagrid-borders>.dx-datagrid-headers {
+    border-top: 1px solid rgb(0, 0, 0);
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: rgb(255 255 255);
+    color: #838383;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #808a95;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border-color: #e3e3e3;
+    border-style: solid;
+    border-width: 0px;
+    font-size: 16px;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #387cd6;
+    border: 1px solid #387cd6;
+    border-radius: 0.375rem;
 }
