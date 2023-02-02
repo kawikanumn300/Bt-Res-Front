@@ -1,3 +1,4 @@
+import { FilterPipe } from './component/assete/FilterPipe';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -83,7 +84,7 @@ const icons = {
     RegisterModalComponent,
     FoodSelectModalComponent,
     UserPaybillComponent,
-
+    FilterPipe,
 
   ],
   imports: [

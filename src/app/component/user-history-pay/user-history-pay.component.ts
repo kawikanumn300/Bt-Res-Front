@@ -1,56 +1,15 @@
-import { Component, PipeTransform } from '@angular/core';
+import { payurl } from './../../service/BtResUserPayService';
+import { Component, PipeTransform, OnInit } from '@angular/core';
 import { AsyncPipe, DecimalPipe, NgFor } from '@angular/common';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { style } from '@angular/animations';
-
-interface Country {
-	name: string; 
-	flag: string;
-	area: number;
-	population: number;
-
-}
-
-const COUNTRIES: Country[] = [
-	{
-		name: 'Russia',
-		flag: 'f/f3/Flag_of_Russia.svg',
-		area: 17075200,
-		population: 146989754,
-	},
-	{
-		name: 'Canada',
-		flag: 'c/cf/Flag_of_Canada.svg',
-		area: 9976140,
-		population: 36624199,
-	},
-	{
-		name: 'United States',
-		flag: 'a/a4/Flag_of_the_United_States.svg',
-		area: 9629091,
-		population: 324459463,
-	},
-	{
-		name: 'China',
-		flag: 'f/fa/Flag_of_the_People%27s_Republic_of_China.svg',
-		area: 9596960,
-		population: 1409517397,
-	},
-];
-
-function search(text: string, pipe: PipeTransform): Country[] {
-	return COUNTRIES.filter((country) => {
-		const term = text.toLowerCase();
-		return (
-			country.name.toLowerCase().includes(term) ||
-			pipe.transform(country.area).includes(term) ||
-			pipe.transform(country.population).includes(term)
-		);
-	});
-}
+import { HttpClient } from '@angular/common/http';
+import { Router, ActivatedRoute } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { BtResUserPay } from 'src/app/service/BtResUserPayService';
 
 
 @Component({
@@ -58,14 +17,22 @@ function search(text: string, pipe: PipeTransform): Country[] {
   templateUrl: './user-history-pay.component.html',
   styleUrls: ['./user-history-pay.component.scss']
 })
-export class UserHistoryPayComponent {
-  countries$: Observable<Country[]>;
-	filter = new FormControl('', { nonNullable: true });
+export class UserHistoryPayComponent implements OnInit {
+  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute, private modalService: NgbModal) {
+  }
+  iduser: any;
+  paydata: any;
+  userdata: any;
 
-	constructor(pipe: DecimalPipe) {
-		this.countries$ = this.filter.valueChanges.pipe(
-			startWith(''),
-			map((text) => search(text, pipe)),
-		);
-	}
+  ngOnInit(): void {
+    const data = JSON.parse(sessionStorage.getItem('key') || '{}');
+    this.iduser = data.Value.USER_ID
+    console.log(this.iduser)
+    this.http.get<BtResUserPay>(payurl).subscribe(response => {
+      this.paydata = response.Value
+    });
+    
+  }
+
+
 }
