@@ -13,17 +13,24 @@
             <th scope="col">ราคา </th>
           </tr>
         </thead>
-        <tbody *ngFor="let bill of billdata ; index as i">
-          <tr *ngIf="(bill.CREATE_DATE | date: 'yyyy-MM-dd') !== (datenow | date: 'yyyy-MM-dd')">
+        <tbody>
+          <ng-container *ngFor="let bill of billdata ; index as i">
+            <ng-container *ngFor="let user of userdata ">
+              <ng-container *ngFor="let food of fooddata ">
+                <tr
+                  *ngIf="(bill.CREATE_DATE | date: 'yyyy-MM-dd') === (datenow | date: 'yyyy-MM-dd') && bill.USER_ID === user.USER_ID
+                  && bill.FOOD_ID === food.FOOD_ID">
+                  <th scope="row">{{ i + 1 }}</th>
 
-            <th scope="row">{{ i + 1 }}</th>
-            <td>
-                {{bill.USER_ID }}
-            </td>
-            <td>{{bill.FOOD_ID}} </td>
-            <td>{{bill.BILL_RESULT}}</td>
-          </tr>
-
+                  <td>
+                    {{user.USER_NAME }}
+                  </td>
+                  <td>{{food.FOOD_NAME}} </td>
+                  <td>{{bill.BILL_RESULT}}</td>
+                </tr>
+              </ng-container>
+            </ng-container>
+          </ng-container>
         </tbody>
       </table>
 
