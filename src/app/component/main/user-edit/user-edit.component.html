@@ -9,25 +9,28 @@
                         <div class="card-body p-5">
                             <h2 class="text-uppercase text-center mb-5" style="font-weight:bold;">แก้ไขข้อมูลผู้ใช้</h2>
 
-                            <div >
+                            <div>
                                 <div class="row">
                                     <div class="input-group mb-3 ">
                                         <span class="input-group-text" id="basic-addon1"><i
                                                 class="fa-solid fa-user"></i></span>
                                         <input type="text" class="form-control" placeholder="บัญชีผู้ใช้"
-                                            aria-label="Username" required aria-describedby="basic-addon1" [(ngModel)]="username" readonly>
+                                            aria-label="Username" required aria-describedby="basic-addon1"
+                                            [(ngModel)]="username" readonly>
                                     </div>
                                     <div class="input-group mb-3 reg">
                                         <span class="input-group-text" id="basic-addon1"><i
                                                 class="fa-solid fa-lock"></i></span>
                                         <input type="password" class="form-control" placeholder="รหัสผ่าน"
-                                            aria-label="Password" required aria-describedby="basic-addon1"[(ngModel)]="password">
+                                            aria-label="Password" required aria-describedby="basic-addon1"
+                                            [(ngModel)]="password">
                                     </div>
                                     <div class="input-group mb-3 reg">
                                         <span class="input-group-text" id="basic-addon1"><i
                                                 class="fa-solid fa-unlock"></i></span>
                                         <input type="password" class="form-control" placeholder="ยืนยันรหัสผ่าน"
-                                            aria-label="Password" required aria-describedby="basic-addon1"[(ngModel)]="password">
+                                            aria-label="Password" required aria-describedby="basic-addon1"
+                                            [(ngModel)]="confirmPassword">
                                     </div>
                                 </div>
 
@@ -38,7 +41,7 @@
                                         <span class="input-group-text" id="basic-addon1"><i
                                                 class="fa-solid fa-users"></i></span>
                                         <input type="text" class="form-control" placeholder="ชื่อผู้ใช้" aria-label=""
-                                            required aria-describedby="basic-addon1"[(ngModel)]="name">
+                                            required aria-describedby="basic-addon1" [(ngModel)]="name">
                                     </div>
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="basic-addon1"><i
@@ -58,14 +61,19 @@
                                     <span class="input-group-text" id="basic-addon1"><i
                                             class="fa-solid fa-phone-volume"></i></span>
                                     <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์"
-                                        aria-label="Username" required aria-describedby="basic-addon1" [(ngModel)]="phone">
+                                        aria-label="Username" required aria-describedby="basic-addon1"
+                                        [(ngModel)]="phone">
                                 </div>
 
                                 <div class="d-flex justify-content-center mb-3 mb-lg-4">
                                     <button type="button" class="btn btn-primary btn-lg"
-                                        style="font-weight:bold; font-size: large;"(click)="onSubmit()">ยืนยันการแก้ไขข้อมูล</button>
+                                        style="font-weight:bold; font-size: large;" (click)="onSubmit()" [disabled]="!passwordMatch">ยืนยันการแก้ไขข้อมูล</button>
                                 </div>
-                              </div>
+                                <p class="text-center mt-5 mb-0" *ngIf="!fulltextkey"
+                                    style="color: red; font-weight: bold;">กรุณา กรอกข้อมูลให้ครบถ้วน !! </p>
+                                <p class="text-center mt-5 mb-0" *ngIf="!passwordMatch"
+                                    style="color: red; font-weight: bold;">กรุณา กรอกรหัสผ่านให้ตรงกัน !! </p>
+                            </div>
                         </div>
                     </div>
                 </div>
