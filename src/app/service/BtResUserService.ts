@@ -28,6 +28,7 @@ export interface Value {
   USER_RIGHTS: string;
   CREATE_DATE: Date;
   UPDATE_DATE: Date;
+  USER_BALANCE: number;
 }
 
 

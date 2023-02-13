@@ -49,6 +49,6 @@ export class FoodListMenuComponent {
   foodselect(item:any){
     const modalRef = this.modalService.open(FoodSelectModalComponent);
     modalRef.componentInstance.fooditem = item ;
-
+    modalRef.componentInstance.resid = this.idf ;
   }
 }

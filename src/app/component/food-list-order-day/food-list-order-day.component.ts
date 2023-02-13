@@ -24,6 +24,7 @@ export class FoodListOrderDayComponent implements OnInit {
   usershow: any
   fooddata: any
   searchValue = '';
+  rowindex =0;
   public searchTerm$ = new Subject<string>();
   ngOnInit(): void {
     this.searchTerm$.pipe(debounceTime(500)).subscribe(term => this.searchValue = term);
