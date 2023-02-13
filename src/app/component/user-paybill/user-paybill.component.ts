@@ -2,7 +2,8 @@
 import { baseUrl, BtResUser } from 'src/app/service/BtResUserService';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { userbill } from 'src/app/service/BtResUserBillService';
 
 @Component({
   selector: 'app-user-paybill',
@@ -10,8 +11,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./user-paybill.component.scss']
 })
 export class UserPaybillComponent implements OnInit {
-  constructor(private route: ActivatedRoute, private http: HttpClient) { }
-  iduser: any;
+  constructor(private route: ActivatedRoute, private http: HttpClient, private router: Router) { }
+  iduser!: number;
   fname: any;
   lname: any;
   result: any;
@@ -26,6 +27,8 @@ export class UserPaybillComponent implements OnInit {
   adduserbalance: any;
   foodid: any;
   resid: any;
+  res: any
+  userres: any
   ngOnInit(): void {
     const data = JSON.parse(sessionStorage.getItem('key') || '{}');
     this.iduser = data.Value.USER_ID
@@ -56,21 +59,30 @@ export class UserPaybillComponent implements OnInit {
       USER_BALANCE: this.adduserbalance
     }
     this.http.put(baseUrl + "/" + this.iduser, datatouser).subscribe(response => {
+      this.userres = response
       console.log(response);
+        console.log('สั่งอาหารเรียบร้อย');
+        // const databill = {
+        //   USER_ID: this.iduser,
+        //   FOOD_ID: parseInt(this.foodid),
+        //   RES_ID: parseInt(this.resid),
+        //   BILL_RESULT:parseInt( this.result),
+        //   RECORD_STATUS: "A",
+        //   CREATE_USER_ID: this.iduser,
+        //   UPDATE_USER_ID: this.iduser,
+        //   USER_STATUS: "A",
+        //   BILL_NOTE: this.option,
+        //   BILL_OPTION: this.fooddetail
+        // }
+        // this.http.post(userbill, databill).subscribe(response => {
+        //   this.res = response
+        //   console.log(this.res);
+        // });
+        // this.router.navigate(['/mainmenu']);
+
     });
 
-    const databill = {
-      USER_ID: this.iduser,
-      FOOD_ID: this.foodid,
-      RES_ID: this.resid,
-      BILL_RESULT: this.result,
-      RECORD_STATUS: "A",
-      CREATE_USER_ID:  this.iduser,
-      UPDATE_USER_ID: this.iduser,
-      USER_STATUS: "A",
-      BILL_NOTE: this.option,
-      BILL_OPTION: this.fooddetail
-    }
+
 
   }
 }

@@ -12,7 +12,7 @@
                 <label for="card-number">ชื่อผู้ชำระเงิน</label>
                 <input type="text" id="card-number" name="card-number" [value]="this.getuser.USER_NAME" readonly>
                 <label for="card-expiry">ยอดเงินที่ชำระ</label>
-                <input type="text" id="card-expiry" name="card-expiry" placeholder="บาท">
+                <input type="text" id="card-expiry" name="card-expiry" placeholder="บาท"[value]="this.userbalane">
 
                 <div><label for="formFileMultiple"
                         class="form-label">แนบหลักฐานการชำระเงิน</label>
@@ -26,6 +26,6 @@
 
                 </div>
             </form>
-           
+
         </div>
     </div>
