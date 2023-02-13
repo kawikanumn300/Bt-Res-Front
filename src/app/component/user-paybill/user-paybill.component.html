@@ -13,22 +13,22 @@
                     <div class="row">
                         <div class="col-xl-8">
                             <ul class="list-unstyled">
-                                <li class="text-muted">ผู้สั่ง: <span class="dtext-b">John Bootstrap</span></li>
-                                <li class="text-muted">เวลา: <span class="dtext-b">11:00 จันทร์ 1-2-2023</span></li>
+                                <li class="text-muted">ผู้สั่ง: <span class="dtext-b">{{fname}} {{lname}}</span></li>
+                                <li class="text-muted">วันที่: <span class="dtext-b">{{datenow | date:'dd/MM/yyyy'}}</span></li>
                             </ul>
                         </div>
                         <div class="col-xl-4">
                             <ul class="list-unstyled">
                                 <li class="text-muted"><i class="fas fa-circle"></i>เมนู:
-                                    <span class="dtext-b">กระเพราหมูสับ</span>
+                                    <span class="dtext-b">{{foodname}}</span>
                                 </li>
                                 <li class="text-muted"><i class="fas fa-circle"></i>ขนาด:
-                                    <span class="dtext-b">พิเศษ</span>
-                                    <span class="p-s-1">50<span class="p-s-2">บาท</span></span>
+                                    <span class="dtext-b">{{foodoption}}</span>
+                                    <span class="p-s-1">{{foodprice}}<span class="p-s-2">บาท</span></span>
                                 </li>
                                 <li class="text-muted"><i class="fas fa-circle"></i>เพิ่มเติม:
-                                    <span class="dtext-b">ไข่เจียว</span>
-                                    <span class="p-s-1">10<span class="p-s-2">บาท</span></span>
+                                    <span class="dtext-b">{{option}}</span>
+                                    <span class="p-s-1">{{optionprice}}<span class="p-s-2">บาท</span></span>
                                 </li>
                             </ul>
                         </div>
@@ -37,11 +37,11 @@
                     <div class="row">
                         <div class="col-xl-8">
                             <p class="ms-3"> ความต้องการเพิ่มเติม </p>
-                            <p class="ms-3">Add additional notes and payment information</p>
+                            <p class="ms-3">{{fooddetail}}</p>
                         </div>
                         <div class="col-xl-3">
                             <p class="text-black float-start"><span class="text-black me-3"> ราคารวม </span>
-                                <span style="font-size: 25px;font-weight: bold;">60<span class="p-s-2">บาท</span></span>
+                                <span style="font-size: 25px;font-weight: bold;">{{result}}<span class="p-s-2">บาท</span></span>
                             </p>
                         </div>
                     </div>

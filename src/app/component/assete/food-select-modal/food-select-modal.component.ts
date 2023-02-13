@@ -80,6 +80,7 @@ export class FoodSelectModalComponent implements OnInit {
   }
   checkoptionnooder(event: any) {
     this.option = event.target.value
+    this.optionprice = '0'
     console.log(this.option)
   }
   onValueChange(event: Event): void {
@@ -87,11 +88,22 @@ export class FoodSelectModalComponent implements OnInit {
     this.fooddetail = value;
   }
   submit(){
-    const data ={
-      
+    if(this.result <= 10){
+      return
+    }else{
+      const data ={
+      result: this.result,
+      foodname: this.foodname,
+      foodoption:this.foodoption,
+      option: this.option,
+      fooddetail : this.fooddetail,
+      foodprice : this.foodprice,
+      optionprice:this.optionprice,
+
+    }
+    this.activeModal.close(true)
+    this.rounte.navigate(['/user-paybill',data])
     }
 
-    this.activeModal.close(true)
-    this.rounte.navigate(['/user-paybill'])
   }
 }
