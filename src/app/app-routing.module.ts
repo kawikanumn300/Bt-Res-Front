@@ -1,3 +1,4 @@
+
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FoodListMenuComponent } from './component/food-list-menu/food-list-menu.component';
@@ -68,7 +69,9 @@ const routes: Routes = [
   },
   {
     path:"user-paybill",
-    component:UserPaybillComponent
+    component:UserPaybillComponent,
+
+
   }
 ];
 
