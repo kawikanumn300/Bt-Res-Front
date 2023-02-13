@@ -30,7 +30,6 @@
               <ng-container *ngFor="let food of fooddata ">
                 <tr *ngIf="(bill.CREATE_DATE | date: 'yyyy-MM-dd') === (datenow | date: 'yyyy-MM-dd') && bill.USER_ID === user.USER_ID
                   && bill.FOOD_ID === food.FOOD_ID">
-                  <th scope="row"></th>
                   <td> {{user.USER_NAME }} </td>
                   <td>{{food.FOOD_NAME}} </td>
                   <td>{{bill.BILL_RESULT}}</td>
