@@ -6,7 +6,7 @@
       <h3 style="font-weight: bold;">รายการสั่งอาหารประจำวันนี้</h3>
     </div>
     <div class="input-group input-group-res mb-3">
-      <input type="text" class="form-control" [(ngModel)]="searchValue" (ngModelChange)="searchTerm$.next($event)"
+      <input id="textarea" type="text" class="form-control"[(ngModel)]="searchValue" (ngModelChange)="searchTerm$.next($event)"
         placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
       <div class="input-group-append">
         <span class="input-group-text" id="search-btn">Search</span>

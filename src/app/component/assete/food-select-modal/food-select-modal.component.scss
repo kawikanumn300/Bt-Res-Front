@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@200&display=swap');
+
 .modal-header {
   display: flex;
   flex-shrink: 0;
@@ -149,4 +151,7 @@
   padding-left: calc(var(--bs-gutter-x) * .5);
   margin-top: var(--bs-gutter-y);
 
+}
+::ng-deep #textarea {
+  font-family: 'Sarabun', sans-serif;
 }
