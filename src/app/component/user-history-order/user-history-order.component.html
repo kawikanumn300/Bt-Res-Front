@@ -17,7 +17,7 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th scope="col">ลำดับ</th>
+
           <th scope="col">วันที่สั่ง</th>
           <th scope="col">ชื่ออาหาร</th>
           <th scope="col">ราคา</th>
@@ -28,7 +28,7 @@
             <ng-container *ngFor="let food of fooddata ">
               <tr *ngIf=" bill.USER_ID === userdata.USER_ID
               && bill.FOOD_ID === food.FOOD_ID">
-                <th scope="row">{{i}}</th>
+
                 <td> {{bill.CREATE_DATE | date:'yyyy-MM-dd'}} </td>
                 <td>{{food.FOOD_NAME}} </td>
                 <td>{{bill.BILL_RESULT}}</td>
