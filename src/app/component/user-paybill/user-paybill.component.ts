@@ -46,11 +46,11 @@ export class UserPaybillComponent implements OnInit {
 
     this.http.get<BtResUser>(baseUrl + "/" + this.iduser).subscribe(response => {
       this.userbalance = response.Value
-      console.log(this.userbalance.USER_BALANCE);
+      // console.log(this.userbalance.USER_BALANCE);
       this.adduserbalance = parseInt(this.result) + this.userbalance.USER_BALANCE
-      console.log(this.adduserbalance);
-      console.log(this.foodid);
-      console.log(this.resid);
+      // console.log(this.adduserbalance);
+      // console.log(this.foodid);
+      // console.log(this.resid);
     })
   }
 
@@ -60,25 +60,26 @@ export class UserPaybillComponent implements OnInit {
     }
     this.http.put(baseUrl + "/" + this.iduser, datatouser).subscribe(response => {
       this.userres = response
-      console.log(response);
-        console.log('สั่งอาหารเรียบร้อย');
-        // const databill = {
-        //   USER_ID: this.iduser,
-        //   FOOD_ID: parseInt(this.foodid),
-        //   RES_ID: parseInt(this.resid),
-        //   BILL_RESULT:parseInt( this.result),
-        //   RECORD_STATUS: "A",
-        //   CREATE_USER_ID: this.iduser,
-        //   UPDATE_USER_ID: this.iduser,
-        //   USER_STATUS: "A",
-        //   BILL_NOTE: this.option,
-        //   BILL_OPTION: this.fooddetail
-        // }
-        // this.http.post(userbill, databill).subscribe(response => {
-        //   this.res = response
-        //   console.log(this.res);
-        // });
-        // this.router.navigate(['/mainmenu']);
+      // console.log(response);
+      console.log('สั่งอาหารเรียบร้อย');
+      const databill = {
+        USER_ID: this.iduser,
+        FOOD_ID: parseInt(this.foodid),
+        RES_ID: parseInt(this.resid),
+        BILL_RESULT: parseInt(this.result),
+        RECORD_STATUS: "A",
+        CREATE_USER_ID: this.iduser,
+        UPDATE_USER_ID: this.iduser,
+        USER_STATUS: "A",
+        BILL_NOTE: this.option,
+        BILL_OPTION: this.fooddetail
+      }
+      this.http.post(userbill, databill).subscribe(response => {
+        this.res = response
+        // console.log(this.res);
+         this.router.navigate(['/mainmenu']);
+      });
+
 
     });
 

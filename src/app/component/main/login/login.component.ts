@@ -34,7 +34,7 @@ export class LoginComponent {
     }).subscribe(async response => {
       this.isload = false;
       this.value = response;
-      console.log(this.value);
+      // console.log(this.value);
 
 
 
@@ -68,7 +68,7 @@ export class LoginComponent {
     }, error => {
       console.log(error);
     });
-    console.log(data);
+    // console.log(data);
   }
   forgetpassword() {
     const modalRef = this.modalService.open(LoginModalComponent);

@@ -22,11 +22,11 @@ export class UserHistoryOrderComponent implements OnInit {
   billdata: any;
   userdata: any;
   fooddata: any;
-  
+
   ngOnInit(): void {
     const data = JSON.parse(sessionStorage.getItem('key') || '{}');
     this.iduser = data.Value.USER_ID
-    console.log(this.iduser)
+    // console.log(this.iduser)
 
     this.http.get<BtResUserBill>(userbill).subscribe(response => {
       this.billdata = response.Value
@@ -37,7 +37,7 @@ export class UserHistoryOrderComponent implements OnInit {
     });
     this.http.get<BtResFoodList>(foodlisturl).subscribe(response => {
       this.fooddata = response.Value
-      console.log(this.fooddata)
+      // console.log(this.fooddata)
     });
   }
   autonumber(){

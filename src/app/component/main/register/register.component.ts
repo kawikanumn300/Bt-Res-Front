@@ -53,7 +53,7 @@ export class RegisterComponent {
       this.http.post(baseUrl, data)
         .subscribe(async response => {
           this.value = response;
-          console.log(this.value);
+          // console.log(this.value);
         })
 
       // console.log(this.username)
