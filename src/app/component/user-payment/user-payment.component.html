@@ -10,17 +10,18 @@
                 <div style="padding-top:20px"></div>
                 <div style="padding-bottom: 20px;"></div>
                 <label for="card-number">ชื่อผู้ชำระเงิน</label>
-                <input type="text" id="card-number" name="card-number" [value]="this.getuser.USER_NAME" readonly>
+                <input type="text" id="card-number" name="card-number" [value]="this.getuser.USER_NAME"  readonly>
                 <label for="card-expiry">ยอดเงินที่ชำระ</label>
-                <input type="text" id="card-expiry" name="card-expiry" placeholder="บาท"[value]="this.userbalane">
+                <input type="text" id="card-expiry" name="card-expiry" placeholder="บาท" [(ngModel)]="userbalane">
 
                 <div><label for="formFileMultiple"
                         class="form-label">แนบหลักฐานการชำระเงิน</label>
-                    <input class="form-control" type="file" id="formFileMultiple" multiple />
+                        <app-upload (onUploadFinished)="onUploadFinished($event)"></app-upload>
+
                 </div>
                 <br>
 
-                <input type="submit" value="ยืนยันการชำระเงิน">
+                <input type="submit" value="ยืนยันการชำระเงิน" (click)="submit()">
                 <div class="payment-form" style="font-size: 16px; font-weight: bold;">
                     <label for="card-number">สำหรับพนักงานท่านไดต้องการชำระเงินด้วย เงินสด กรุณาติดต่อเจ้าหน้าที่ !!</label>
 
