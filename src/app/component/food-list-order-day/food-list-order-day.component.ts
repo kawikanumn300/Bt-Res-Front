@@ -30,16 +30,16 @@ export class FoodListOrderDayComponent implements OnInit {
     this.searchTerm$.pipe(debounceTime(500)).subscribe(term => this.searchValue = term);
     this.http.get<BtResUserBill>(userbill).subscribe(response => {
       this.billdata = response.Value
-      console.log(this.billdata)
+      // console.log(this.billdata)
     });
 
     this.http.get<BtResUser>(baseUrl).subscribe(response => {
       this.userdata = response.Value
-      console.log(this.userdata)
+      // console.log(this.userdata)
     });
     this.http.get<BtResFoodList>(foodlisturl).subscribe(response => {
       this.fooddata = response.Value
-      console.log(this.fooddata)
+      // console.log(this.fooddata)
     });
 
   }

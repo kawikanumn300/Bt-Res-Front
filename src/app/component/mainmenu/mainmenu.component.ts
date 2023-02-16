@@ -19,7 +19,7 @@ export class MainmenuComponent implements OnInit {
   ngOnInit() {
     this.http.get<BtResNameList>(namelisturl).subscribe(response => {
       this.resdata = response.Value;
-      console.log(this.resdata);
+      // console.log(this.resdata);
 
     })
 
@@ -34,7 +34,7 @@ export class MainmenuComponent implements OnInit {
     this.showImg = false;
   }
   selectmenu(item: any) {
-    console.log(item);
+    // console.log(item);
     this.router.navigate(['/food-list-menu', { id: item }]);
 
   }

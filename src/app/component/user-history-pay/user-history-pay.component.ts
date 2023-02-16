@@ -27,11 +27,11 @@ export class UserHistoryPayComponent implements OnInit {
   ngOnInit(): void {
     const data = JSON.parse(sessionStorage.getItem('key') || '{}');
     this.iduser = data.Value.USER_ID
-    console.log(this.iduser)
+    // console.log(this.iduser)
     this.http.get<BtResUserPay>(payurl).subscribe(response => {
       this.paydata = response.Value
     });
-    
+
   }
 
 

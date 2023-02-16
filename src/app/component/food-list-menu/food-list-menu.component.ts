@@ -26,12 +26,12 @@ export class FoodListMenuComponent {
   }
   ngOnInit() {
     this.idf = this.route.snapshot.paramMap.get('id');
-    console.log(this.idf);
+    // console.log(this.idf);
 
     this.http.get<BtResNameList>(namelisturl+'/'+this.idf).subscribe(response => {
       this.resdata = response.Value;
       console.log('ข้อมูลร้านอาหาร');
-      console.log(this.resdata);
+      // console.log(this.resdata);
       this.resimage ="https://utcc-prc.demotoday.net/bt-order-api"+ this.resdata.RES_IMAGE;
       this.resname =this.resdata.RES_NAME;
       this.resphone =this.resdata.RES_PHONE;
@@ -43,7 +43,7 @@ export class FoodListMenuComponent {
       console.log('ข้อมูลรายการอาหาร');
       console.log(this.foodlistdata);
       this.foodimg = this.foodlistdata.FOOD_IMAGE
-      console.log(this.foodimg);
+      // console.log(this.foodimg);
     })
   }
   foodselect(item:any){
