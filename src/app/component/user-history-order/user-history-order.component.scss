@@ -134,3 +134,6 @@ tr {
     border: 1px solid #387cd6;
     border-radius: 0.375rem;
 }
+::ng-deep #textarea {
+    font-family: 'Sarabun', sans-serif;
+  }
