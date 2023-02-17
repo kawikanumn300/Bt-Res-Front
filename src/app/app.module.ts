@@ -59,6 +59,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterModalComponent } from './component/main/register-modal/register-modal.component';
 import { FoodSelectModalComponent } from './component/assete/food-select-modal/food-select-modal.component';
 import { UserPaybillComponent } from './component/user-paybill/user-paybill.component';
+import { UploadComponent } from './service/upload/upload.component';
 
 const icons = {
 
@@ -85,6 +86,7 @@ const icons = {
     FoodSelectModalComponent,
     UserPaybillComponent,
     FilterPipe,
+    UploadComponent,
 
   ],
   imports: [
